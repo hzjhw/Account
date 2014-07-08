@@ -1,0 +1,13 @@
+.DS_Store
+npm-debug.log
+.idea/
+.settings
+node_modules/
+bower_components/
+doc/
+*.iml
+*.swp
+/.tmp/
+/config.js
+/uploads
+/logs
