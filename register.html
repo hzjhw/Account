@@ -83,8 +83,9 @@
             }
         });
         $('#J_RePwd').mouseout(function(){
+            debugger
             var RePwd=$('#J_RePwd').val();;var password=$('#J_Pwd').val();
-            if(RePwd === password){alert("密码不一样！"); return false;}
+            if(RePwd !== password){alert("密码不一样！"); return false;}
         });
         $('#J_RePwd').mouseover(function(){
             var RePwd=$('#J_RePwd').val();
@@ -108,7 +109,7 @@
             if(!ree.test(email)){alert("email错误！"); return false;}
             document.cookie=username+'='+encodeURIComponent(password);
             alert("注册成功！")
-            window.location.href="login.html";
+            window.location.href="/login.html";
         });
 
 

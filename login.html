@@ -71,25 +71,25 @@
     }
 </style>
 <script>
-    function r()
-    {
-
-        var username=document.getElementById("username");
-
-        var pass=document.getElementById("password");
-        if(username.value=="")
-        {
+    function r() {
+        var username=$("#username");
+        var pass=$("#password");
+        if (username.value === "") {
             alert("请输入用户名");
             username.focus();
             return;
         }
-        if(pass.value=="")
-        {
+        if (pass.value=="") {
             alert("请输入密码");
             return;
         }
         return true;
     }
+    $(function(){
+        $(".submit").bind('click', function(){
+            r();
+        })
+    })
 </script>
 <div class="dly">
     <div class="one">
@@ -102,10 +102,10 @@
         <input id="password" type="password" name="password" />
     </div>
     <div class="four">
-        <button type="submit" class="submit" onclick="r();">登　录</button>
+        <button type="submit" class="submit">登　录</button>
     </div>
     <div class="five" align="right">
-        <a href="#">免费注册</a>
+        <a href="register.html">免费注册</a>
     </div>
 </div>
 
