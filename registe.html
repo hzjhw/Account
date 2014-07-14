@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="styles/register/20140714.css" rel="stylesheet" type="text/css" />
+
+    <script type="" src="scripts/register/jquery.min.js"></script>
+    <meta name="data-spm" content="a2145" />
+    <title>�»�Ա���ע��</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+</head>
+
+<body class="chl-reg" data-spm="5765625">
+<script type="text/javascript">
+    window.onload=function(){
+
+
+        $('#J_Nick').mouseover(function(){
+            var usern=$('#J_Nick').val();
+            if( usern == ''){ $('.msg-cnt').eq(0).html("Ҫ4-19���ַ�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 -160px");
+            }
+        });
+        $('#J_Pwd').mouseover(function(){
+            var usern=$('#J_Pwd').val();
+            if( usern == ''){ $('.msg-cnt').eq(1).html("Ҫ6-19���ַ�a");
+                $(".msg-weak i").eq(1).css("background-position"," 0 -160px");
+            }
+        });
+        $('#J_Email').mouseover(function(){
+            var email=$('#J_Email').val();
+            if( email == ''){ $('.msg-cnt').eq(3).html("Ҫ4-19���ַ�a");
+                $(".msg-weak i").eq(3).css("background-position"," 0 -160px");
+            }
+        });
+
+        $('#J_Nick').mouseout(function(){
+            var username=$('#J_Nick').val();
+            var reg=/^[a-zA-Z0-9_]{4,19}$/;
+            if(!reg.test(username)){
+                $('.msg-cnt').eq(0).html("4-19���ַ�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(0).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 -200px");
+            }
+
+        });
+        $('#J_Pwd').mouseout(function(){
+            var password=$('#J_Pwd').val();
+            var reg=/^[a-zA-Z0-9_]{6,19}$/;
+            if(!reg.test(password)){
+                $('.msg-cnt').eq(1).html("6-19���ַ�");
+                $(".msg-weak i").eq(1).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(1).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(1).css("background-position"," 0 -200px");
+                $('#J_RePwd').css("background","#fff");
+                $('#J_RePwd').attr("disabled",false);
+                // $('#J_RePwd').removeAttr("disabled");
+            }
+
+
+        });
+
+        $('#J_Email').mouseout(function(){
+            var email=$('#J_Email').val();
+            var re = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(!re.test(email)){
+                $('.msg-cnt').eq(3).html("����");
+                $(".msg-weak i").eq(3).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(3).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(3).css("background-position"," 0 -200px");
+            }
+        });
+        $('#J_RePwd').mouseout(function(){
+            var RePwd=$('#J_RePwd');var password=$('#J_Pwd').val();
+            if(RePwd === password){alert("���벻һ��"); return false;}
+        });
+        $('#J_RePwd').mouseover(function(){
+            var RePwd=$('#J_RePwd').val();
+            if( RePwd == ''){ $('.msg-cnt').eq(2).html("����һ������");
+                $(".msg-weak i").eq(2).css("background-position"," 0 -160px");
+            }
+        });
+
+        $('#J_BtnBasicInfoForm').click(function(){
+            var username=$('#J_Nick').val();
+            var password=$('#J_Pwd').val();
+            var email=$('#J_Email').val();
+
+            var reg=/^[a-zA-Z0-9_]{4,19}$/;
+            var rega=/^[a-zA-Z0-9_]{6,19}$/;
+            var ree = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(username ==''){alert("��Ա��Ϊ�գ�");return false;}
+            if(!reg.test(username)){alert("��Ա�����"); return false;}
+            if(!rega.test(password) ){alert("�������"); return false;}
+            if(email ==''){alert("emailΪ�գ�");  return false;}
+            if(!ree.test(email)){alert("email����"); return false;}
+            document.cookie=username+'='+encodeURIComponent(password);
+            alert("ע��ɹ���")
+            window.location.href="login.html";
+        });
+
+
+    }
+</script>
+
+<div id="content" data-spm="1000503">
+    <div class="steps step-1">
+
+        <ol class="xsteps">
+            <li>��д�˻���Ϣ</li>
+            <li>��֤�˻���Ϣ</li>
+            <li>ע��ɹ�</li>
+        </ol>
+
+    </div>
+    <div class="reg clearfix">
+        <div class="form">
+            <div class="form-list">
+                <form id="J_Step1Form" name="formRegStep1Main" action="Account/login.html" method="post"><input type="hidden" name="ua" id="UA_InputId" value="161tpOWUuXBidH1MRWQZ0InIldyJ0J3AibxJg==|taBkcTQxdOHkoTRxNHFU0QY=|tJFV4sbweFGpcSkNye3Ynbl9WS62Xhbul66KXYo=|s6aDR2N2MzZz5uOmM3ZTdlNmw8YiRxKHsjcyJ7Kn4peCx+KX4sYR|sqcy9kFUkBUAVZHUEDSDWwOHo3Sj|sTTw1PAn|sCXhxeE2|v6q/e8zoYClgacw4zOW9xSFocIiguECknGS8SJDIEDhgSb1VDXSDqvKKEitiOhP3X9eeRo57EzrCGs8H/4cf95PLQrUtxa1VgOS8NcL7YxvzJgLG4sYRxg==|votP+P05PPjt2J2obBlcSY2YrcjNCXwZnFhNeB0Y3KmcGc4Z|vaitaU36v+rfyk+LTGh9OD147eitqK2IjRhtpKFFEDVw9dC1MFUARVBVECUAJeLGAhfA5DM=|vKmcWO/LvCTMhHwFPDi/uJxYfAude39qX5ueWl+bjgsuCt0K|u/46jamNSRwpHNj9iL15bAk8qcxJnkk=|uv87jKgO+d6GgfiwlFB18OUhFCF0sKXAtbCVwBfA|ufw4j6uPSy577iofGn+7/psOa25LnEs=|uO0pnroc6w2VrRUx9UIHEleTtpMWwQUAxODEABUQVUAVcEWSRQ==|p9IWoYUj1DKqkioOyt8bDgtOWw5rHske|ptMXoIQi1TOrkysPy84KHxpfei9q7zjv|pdAUo4ch1jCokCgMyN0ZDAlMKXxZXItc|pOElkraSVgM2I+fC56Jmc3YzRnP2o3Sj|o/YyhaGFQfaz1rN3UgdypWFkoISgZHF0MUTBRFGGUQ==|otcTpIAm0Tevly8Lz8oOGx5bLqsue6x7|ofQwh6MF8vWMxOAkk9bT1hI3UnegZGGlgaVhdHE0sZTRRJNE|oNURpoIk09St5cEFENTBxIEEIXRBlkE=|r/o+ia0L/BqCugIm4lUQJRDU8cTBFtLXEzcT18LHggdiFyL1Ig==|rtsfqIwq3dqj688LDsrf2p8afwpvuG8=|rdgcq48p3jigmCAEwNURBAFEwaTRRJNE|rNkdqo4o3zmhmSEFwcQAFRBVwEUQZbJl|q94arYkv2D6mniYCxtMXAgdSx8KnMuUy|qu8rnLicWG0ovXlMWQzI3diNGI2oPeo9|qdwYr4st2jyknCQAxMEFEBVwRTBlUIdQ|qN0Zroos2z2lnSUBxdAUAQRhNCEUYbZh|l+ImkbUT5AKaoho++v87LitOGw6LHske|luMnkLQS5QOboxs/++4qPzpPOi86f6h/|leAkk7cR5gCYoBg8+P05LClcKTwZDNsM|lNEVooaiZgM2I+fCR4OWk+aT5tOGUYY=|k9bT1hIX0/YyJ2J3s4bTpmI3omYTRoKXgscDFtJHUpaD1kOH0hZTl6Jmc2ail9IWIxbS58IG0vczVpK3IuajZ0I389YSN2Kmg8YCJxLW89YSxtP2MhcS1sNWkocCxtOmYncS1gIXkkU=">
+                    <input name="_tb_token_" type="hidden" value="c2K1JVBYRSn">
+                    <input type="hidden" name="CtrlVersion" value="1,0,0,7">
+                    <input type="hidden" id="tid" name="tid" value="">
+                    <input type="hidden" name="userFrom" value="http://reg.taobao.com/member/new_register.jhtml">
+                    <input type="hidden" name="agreement" value="1">
+                    <input type="hidden" name="action" value="new_register_action">
+                    <input type="hidden" name="event_submit_do_register_user" value="anything">
+                    <input type="hidden" name="_fm.n._0.a" value="">
+                    <input type="hidden" name="refuser" value="">
+                    <input type="hidden" name="appendinfo" value="">
+                    <input type="hidden" name="regcheck" value="regcheck">
+                    <input type="hidden" name="jversion" value="" id="J_Version">
+                    <input type="hidden" name="jversiondo" value="" id="J_VersionDo">
+                    <input type="hidden" name="hr" value="YmNMTlJpWjlmYWxzZQ==">
+                    <input type="hidden" id="J_Tips" name="tips" value="">
+                    <input type="hidden" id="J_Disable" name="disable" value="">
+                    <input type="hidden" name="" value="">
+                    <input type="hidden" name="" value="">
+                    <input type="hidden" id="tt" name="tt" value="">
+                    <input type="hidden" id="calculate" name="calculate" value="">
+
+                    <input type="hidden" name="oslanguage" value="zh-CN">
+                    <input type="hidden" name="sr" value="1360*768">
+                    <input type="hidden" name="osVer" value="windows|5.1">
+                    <input type="hidden" name="naviVer" value="chrome|34.01847116">
+
+
+                    <input type="hidden" id="yparam" name="_fm.n._0.y" value="">
+                    <input type="hidden" id="done" name="_fm.n._0.d" value="">
+                    <input type="hidden" name="TPL_redirect_url" value="">
+                    <input type="hidden" name="redirect_url_name" value="">
+
+
+                    <div class="kv-item kv-nick">
+                        <span class="kv-label"><label for="J_Nick" class="tsl" data-phase-id="r_1_2">��Ա��</label></span>
+                        <input class="i-text" id="J_Nick" name="_fm.n._0.n" value="" type="text">
+
+                        <div class="msg-box">
+                            <div class="msg-weak msg-inline show msg-error" id="J_NickTip" style="visibility: visible;">
+                                <i></i>
+                                <div class="msg-cnt">����Ϊ��</div>
+                            </div>
+                        </div>
+                        <div class="num-tip" id="J_NumTip" style="visibility: hidden;"></div>
+                        <div class="nick-suggest" id="J_NickSuggest" style="display: none;">
+                            <span class="nick-suggest-tit tsl" data-phase-id="r_1_11">�Ƽ���ʹ�ã�</span>
+                            <ul id="J_NickSuggestList">
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="kv-item">
+                        <span class="kv-label"><label for="J_Pwd" class="tsl" data-phase-id="r_1_3">��¼���룺</label></span>
+                        <input class="i-text" id="J_Pwd" name="_fm.n._0.p" type="password" value="">
+                        <div class="msg-box">
+                            <div class="msg-weak msg-inline show msg-error" id="J_PwdTip" style="visibility: visible;">
+                                <i></i>
+                                <div class="msg-cnt">����Ϊ��</div>
+                            </div>
+                        </div>
+
+                        <div class="pw-strength pw-weak" id="J_PwdStrength">
+                            <div class="pw-bar"></div>
+                            <div class="pw-letter">
+                                <span class="tsl" data-phase-id="r_1_8">��</span>
+                                <span class="tsl" data-phase-id="r_1_9">��</span>
+                                <span class="tsl" data-phase-id="r_1_10">ǿ</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="kv-item">
+                        <span class="kv-label"><label for="J_RePwd" class="tsl" data-phase-id="r_1_4">ȷ�����룺</label></span>
+                        <input class="i-text" id="J_RePwd" type="password" name="_fm.n._0.c" value="" disabled="">
+                        <div class="msg-box">
+                            <div class="msg-weak msg-inline hide" id="J_RePwdTip" style="visibility: hidden;">
+                                <i></i>
+                                <div class="msg-cnt">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="kv-item">
+                        <span class="kv-label"><label for="J_Email" class="tsl" data-phase-id="r_1_2">Email��</label></span>
+                        <input class="i-text" id="J_Email" name="_fm.n._0.n" value="" type="text">
+
+                        <div class="msg-box">
+                            <div class="msg-weak msg-inline show msg-error" id="J_EmailTip" style="visibility: visible;">
+                                <i></i>
+                                <div class="msg-cnt">����Ϊ��</div>
+                            </div>
+                        </div>
+                        <div class="num-tip" id="J_e" style="visibility: hidden;"></div>
+                    </div>
+
+                    <div class="kv-item">
+                        <span class="kv-label"><label for="J_Code" class="tsl" data-phase-id="r_1_5">��֤�룺</label></span>
+                        <input class="i-shorttext" id="J_Code" type="text" autocomplete="off" name="jJrT/JOeOYPiFDRS5KGYXbzOjRNzDBR/BhVq9tA4XPYK27JfVDwq/DV3vQmjJG6oN6oPwbHyvNL4mcdkTwfWuE66" maxlength="4">
+                        <div id="J_CheckCode" class="checkcode checkcode-v" data-imgurl="http://pin.aliyun.com/get_img?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78" data-audiourl="http://pin.aliyun.com/get_audio?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78" data-apiserver="http://pin.aliyun.com/"><div class="reg-checkcode-img" id="J_ImgCode1" style="display: block;"><img id="J_CheckCodeImg1" width="100" height="30" onmousedown="return false;" src="http://pin.aliyun.com//get_img?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78&amp;kjtype=default&amp;t=1404905986011"><a href="#nogo" onmousedown="return false;" role="button" title="���»�ȡ��֤��" aria-label="���»�ȡ��֤��" id="J_ImgRefresher1" class="reg-checkcode-refresher">���»�ȡ��֤��</a></div><div class="reg-checkcode-audio" id="J_AudioCode1" style="display: none;"><span class="reg-audio-state" id="J_AudioState1"><a href="#nogo" class="reg-audio-state-text" id="J_AudioStateText1" onmousedown="return false;"></a><span class="reg-audio-state-progress" id="J_AudioStateProgress1"></span></span><a href="#nogo" role="button" onmousedown="return false;" title="���»�ȡ��֤��" aria-label="���»�ȡ��֤��" id="J_AudioRefresher1" class="reg-checkcode-refresher">���»�ȡ��֤��</a><a href="#nogo" role="button" onmousedown="return false;" title="��ȡͼƬ��֤��" aria-label="��ȡͼƬ��֤��" id="J_ImgSwitcher1" class="reg-checkcode-switcher reg-img-switcher">��ȡͼƬ��֤��</a></div></div>
+
+                        <div class="msg-box w180">
+                            <div class="msg-weak msg-inline hide" id="J_CheckCodeTip" style="visibility: hidden;">
+                                <i></i>
+                                <div class="msg-cnt tsl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="kv-item form-meta">
+                        <input type="hidden" value="2,1,2,1" name="CtrlVersion">
+                        <input type="hidden" value="" name="tid">
+                        <input name="_fm.n._0.q" type="hidden" value="" style="display:none">
+                        <input name="_fm.n._0.qu" type="hidden" value="" style="display:none">
+                        <input name="_fm.n._0.qui" type="hidden" value="" style="display:none">
+                        <input name="_fm.n._0.quic" type="hidden" value="" style="display:none">
+                        <input name="_fm.n._0.quick" type="hidden" value="" style="display:none">
+                        <input name="_fm.n._0.pa" type="hidden" value="1" id="J_PwdStrengthInput">
+
+                        <input type="hidden" name="randomName" value="" id="randomName">
+                        <input type="hidden" name="focusCount" id="focusCount" value="">
+                        <input type="hidden" name="keyupCount" id="keyupCount" value="">
+                        <button class="btn-long tsl" data-phase-id="r_1_6" id="J_BtnBasicInfoForm" type="submit">ͬ��Э�鲢ע��</button>
+
+                        <div class="agreement">
+                            <a href="http://reg.taobao.com/member/agreement.jhtml" target="_blank" id="J_TbAgreementHandle" data-url="http://reg.taobao.com/member/agreement.jhtml" class="tsl" data-phase-id="r_1_7">���Ա�����Э�顷</a>
+                            <div class="agreement-content" id="J_AgreementContainer"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+</body>
+</html>

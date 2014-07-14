@@ -1,267 +1,346 @@
-
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="styles/register/reg.css" rel="stylesheet" type="text/css" />
-    <script type="" src="scripts/vendor/jquery.min.js"></script>
-    <title>会员注册</title>
+    <meta charset="utf-8" />
+    <title>账户注册 | 淘宝网</title>
+    <!--吊顶assets START-->
+    <link rel="stylesheet" href="http://g.tbcdn.cn/??tb/global/2.6.13/global-min.css?t=20140305">
+    <!--吊顶assets END-->
+    <!-- S GLOBAL CSS -->
+    <link rel="stylesheet" href="http://g.tbcdn.cn/tb/global/2.9.7/global-min.css">
+    <link rel="stylesheet" href="http://a.tbcdn.cn//??p/global/1.0/header-min.css?t=.css">
+    <!-- S GLOBAL CSS -->
+
+    <!-- reg1 CSS -->
+    <link rel="stylesheet" href="styles/register/20140714.css">
+    <script type="" src="scripts/register/register.js"></script>
+    <script type="" src="scripts/register/jquery.min.js"></script>
+
 </head>
-<body class="chl-reg">
-<script type="text/javascript">
-    $(function(){
-        $('#J_Nick').mouseover(function(){
-            var usern=$('#J_Nick').val();
-            if( usern == ''){ $('.msg-cnt').eq(0).html("Ҫ4-19���ַ�");
-                $(".msg-weak i").eq(0).css("background-position"," 0 -160px");
-            }
-        });
-        $('#J_Pwd').mouseover(function(){
-            var usern=$('#J_Pwd').val();
-            if( usern == ''){ $('.msg-cnt').eq(1).html("Ҫ6-19���ַ�a");
-                $(".msg-weak i").eq(1).css("background-position"," 0 -160px");
-            }
-        });
-        $('#J_Email').mouseover(function(){
-            var email=$('#J_Email').val();
-            if( email == ''){ $('.msg-cnt').eq(3).html("Ҫ4-19���ַ�a");
-                $(".msg-weak i").eq(3).css("background-position"," 0 -160px");
-            }
-        });
-
-        $('#J_Nick').mouseout(function(){
-            var username=$('#J_Nick').val();
-            var reg=/^[a-zA-Z0-9_]{4,19}$/;
-            if(!reg.test(username)){
-                $('.msg-cnt').eq(0).html("4-19���ַ�");
-                $(".msg-weak i").eq(0).css("background-position"," 0 0");
-            }else{
-                $('.msg-cnt').eq(0).html("һ��ע��ɹ������޸�");
-                $(".msg-weak i").eq(0).css("background-position"," 0 -200px");
-            }
-
-        });
-        $('#J_Pwd').mouseout(function(){
-            var password=$('#J_Pwd').val();
-            var reg=/^[a-zA-Z0-9_]{6,19}$/;
-            if(!reg.test(password)){
-                $('.msg-cnt').eq(1).html("6-19���ַ�");
-                $(".msg-weak i").eq(1).css("background-position"," 0 0");
-            }else{
-                $('.msg-cnt').eq(1).html("һ��ע��ɹ������޸�");
-                $(".msg-weak i").eq(1).css("background-position"," 0 -200px");
-                $('#J_RePwd').css("background","#fff");
-                $('#J_RePwd').attr("disabled",false);
-            }
-
-
-        });
-
-        $('#J_Email').mouseout(function(){
-            var email=$('#J_Email').val();
-            var re = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-            if(!re.test(email)){
-                $('.msg-cnt').eq(3).html("����");
-                $(".msg-weak i").eq(3).css("background-position"," 0 0");
-            }else{
-                $('.msg-cnt').eq(3).html("һ��ע��ɹ������޸�");
-                $(".msg-weak i").eq(3).css("background-position"," 0 -200px");
-            }
-        });
-        $('#J_RePwd').mouseout(function(){
-            debugger
-            var RePwd=$('#J_RePwd').val();;var password=$('#J_Pwd').val();
-            if(RePwd !== password){alert("���벻һ��"); return false;}
-        });
-        $('#J_RePwd').mouseover(function(){
-            var RePwd=$('#J_RePwd').val();
-            if( RePwd == ''){ $('.msg-cnt').eq(2).html("����һ������");
-                $(".msg-weak i").eq(2).css("background-position"," 0 -160px");
-            }
-        });
-
-        $('#J_BtnBasicInfoForm').click(function(){
-            var username=$('#J_Nick').val();
-            var password=$('#J_Pwd').val();
-            var email=$('#J_Email').val();
-
-            var reg=/^[a-zA-Z0-9_]{4,19}$/;
-            var rega=/^[a-zA-Z0-9_]{6,19}$/;
-            var ree = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-            if(username ==''){alert("��Ա��Ϊ�գ�");return false;}
-            if(!reg.test(username)){alert("��Ա�����"); return false;}
-            if(!rega.test(password) ){alert("�������"); return false;}
-            if(email ==''){alert("emailΪ�գ�");  return false;}
-            if(!ree.test(email)){alert("email����"); return false;}
-            document.cookie=username+'='+encodeURIComponent(password);
-            alert("ע��ɹ���")
-            window.location.href="/login.html";
-        });
-    })
+<body data-spm="7275745"><script type="text/javascript">
+    (function (d) {
+        var t=d.createElement("script");t.type="text/javascript";t.async=true;t.id="tb-beacon-aplus";
+        t.setAttribute("exparams","category=&userid=&aplus");
+        t.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/aplus_v2.js";
+        d.getElementsByTagName("head")[0].appendChild(t);
+    })(document);
 </script>
 
-<div id="content" data-spm="1000503">
-<div class="steps step-1">
-
-    <ol class="xsteps">
-        <li>��д�˻���Ϣ</li>
-        <li>��֤�˻���Ϣ</li>
-        <li>ע��ɹ�</li>
-    </ol>
-
+<!-- S GLOBAL HTML -->
+<div id="J_SiteNav" class="site-nav">
+    <div id="J_SiteNavBd" class="site-nav-bd">
+        <ul id="J_SiteNavBdL" class="site-nav-bd-l"></ul>
+        <ul id="J_SiteNavBdR" class="site-nav-bd-r"></ul>
+    </div>
 </div>
-<div class="reg clearfix">
-    <div class="form">
-        <div class="form-list">
-            <form id="J_Step1Form" name="formRegStep1Main" action="Account/login.html" method="post"><input type="hidden" name="ua" id="UA_InputId" value="161tpOWUuXBidH1MRWQZ0InIldyJ0J3AibxJg==|taBkcTQxdOHkoTRxNHFU0QY=|tJFV4sbweFGpcSkNye3Ynbl9WS62Xhbul66KXYo=|s6aDR2N2MzZz5uOmM3ZTdlNmw8YiRxKHsjcyJ7Kn4peCx+KX4sYR|sqcy9kFUkBUAVZHUEDSDWwOHo3Sj|sTTw1PAn|sCXhxeE2|v6q/e8zoYClgacw4zOW9xSFocIiguECknGS8SJDIEDhgSb1VDXSDqvKKEitiOhP3X9eeRo57EzrCGs8H/4cf95PLQrUtxa1VgOS8NcL7YxvzJgLG4sYRxg==|votP+P05PPjt2J2obBlcSY2YrcjNCXwZnFhNeB0Y3KmcGc4Z|vaitaU36v+rfyk+LTGh9OD147eitqK2IjRhtpKFFEDVw9dC1MFUARVBVECUAJeLGAhfA5DM=|vKmcWO/LvCTMhHwFPDi/uJxYfAude39qX5ueWl+bjgsuCt0K|u/46jamNSRwpHNj9iL15bAk8qcxJnkk=|uv87jKgO+d6GgfiwlFB18OUhFCF0sKXAtbCVwBfA|ufw4j6uPSy577iofGn+7/psOa25LnEs=|uO0pnroc6w2VrRUx9UIHEleTtpMWwQUAxODEABUQVUAVcEWSRQ==|p9IWoYUj1DKqkioOyt8bDgtOWw5rHske|ptMXoIQi1TOrkysPy84KHxpfei9q7zjv|pdAUo4ch1jCokCgMyN0ZDAlMKXxZXItc|pOElkraSVgM2I+fC56Jmc3YzRnP2o3Sj|o/YyhaGFQfaz1rN3UgdypWFkoISgZHF0MUTBRFGGUQ==|otcTpIAm0Tevly8Lz8oOGx5bLqsue6x7|ofQwh6MF8vWMxOAkk9bT1hI3UnegZGGlgaVhdHE0sZTRRJNE|oNURpoIk09St5cEFENTBxIEEIXRBlkE=|r/o+ia0L/BqCugIm4lUQJRDU8cTBFtLXEzcT18LHggdiFyL1Ig==|rtsfqIwq3dqj688LDsrf2p8afwpvuG8=|rdgcq48p3jigmCAEwNURBAFEwaTRRJNE|rNkdqo4o3zmhmSEFwcQAFRBVwEUQZbJl|q94arYkv2D6mniYCxtMXAgdSx8KnMuUy|qu8rnLicWG0ovXlMWQzI3diNGI2oPeo9|qdwYr4st2jyknCQAxMEFEBVwRTBlUIdQ|qN0Zroos2z2lnSUBxdAUAQRhNCEUYbZh|l+ImkbUT5AKaoho++v87LitOGw6LHske|luMnkLQS5QOboxs/++4qPzpPOi86f6h/|leAkk7cR5gCYoBg8+P05LClcKTwZDNsM|lNEVooaiZgM2I+fCR4OWk+aT5tOGUYY=|k9bT1hIX0/YyJ2J3s4bTpmI3omYTRoKXgscDFtJHUpaD1kOH0hZTl6Jmc2ail9IWIxbS58IG0vczVpK3IuajZ0I389YSN2Kmg8YCJxLW89YSxtP2MhcS1sNWkocCxtOmYncS1gIXkkU=">
-                <input name="_tb_token_" type="hidden" value="c2K1JVBYRSn">
-                <input type="hidden" name="CtrlVersion" value="1,0,0,7">
-                <input type="hidden" id="tid" name="tid" value="">
-                <input type="hidden" name="userFrom" value="http://reg.taobao.com/member/new_register.jhtml">
-                <input type="hidden" name="agreement" value="1">
-                <input type="hidden" name="action" value="new_register_action">
-                <input type="hidden" name="event_submit_do_register_user" value="anything">
-                <input type="hidden" name="_fm.n._0.a" value="">
-                <input type="hidden" name="refuser" value="">
-                <input type="hidden" name="appendinfo" value="">
-                <input type="hidden" name="regcheck" value="regcheck">
-                <input type="hidden" name="jversion" value="" id="J_Version">
-                <input type="hidden" name="jversiondo" value="" id="J_VersionDo">
-                <input type="hidden" name="hr" value="YmNMTlJpWjlmYWxzZQ==">
-                <input type="hidden" id="J_Tips" name="tips" value="">
-                <input type="hidden" id="J_Disable" name="disable" value="">
-                <input type="hidden" name="" value="">
-                <input type="hidden" name="" value="">
-                <input type="hidden" id="tt" name="tt" value="">
-                <input type="hidden" id="calculate" name="calculate" value="">
-
-                <input type="hidden" name="oslanguage" value="zh-CN">
-                <input type="hidden" name="sr" value="1360*768">
-                <input type="hidden" name="osVer" value="windows|5.1">
-                <input type="hidden" name="naviVer" value="chrome|34.01847116">
+<!-- -->
+<!-- 全网顶通 -->
+<!-- E GLOBAL HTML   -->
 
 
-                <input type="hidden" id="yparam" name="_fm.n._0.y" value="">
-                <input type="hidden" id="done" name="_fm.n._0.d" value="">
-                <input type="hidden" name="TPL_redirect_url" value="">
-                <input type="hidden" name="redirect_url_name" value="">
 
 
-                <div class="kv-item kv-nick">
-                    <span class="kv-label"><label for="J_Nick" class="tsl" data-phase-id="r_1_2">��Ա��</label></span>
-                    <input class="i-text" id="J_Nick" name="_fm.n._0.n" value="" type="text">
-
-                    <div class="msg-box">
-                        <div class="msg-weak msg-inline show msg-error" id="J_NickTip" style="visibility: visible;">
-                            <i></i>
-                            <div class="msg-cnt">����Ϊ��</div>
-                        </div>
-                    </div>
-                    <div class="num-tip" id="J_NumTip" style="visibility: hidden;"></div>
-                    <div class="nick-suggest" id="J_NickSuggest" style="display: none;">
-                        <span class="nick-suggest-tit tsl" data-phase-id="r_1_11">�Ƽ���ʹ�ã�</span>
-                        <ul id="J_NickSuggestList">
-                        </ul>
-                    </div>
-                </div>
+<div class="page lang-zh-S">
 
 
-                <div class="kv-item">
-                    <span class="kv-label"><label for="J_Pwd" class="tsl" data-phase-id="r_1_3">��¼���룺</label></span>
-                    <input class="i-text" id="J_Pwd" name="_fm.n._0.p" type="password" value="">
-                    <div class="msg-box">
-                        <div class="msg-weak msg-inline show msg-error" id="J_PwdTip" style="visibility: visible;">
-                            <i></i>
-                            <div class="msg-cnt">����Ϊ��</div>
-                        </div>
+    <input class="J_From" type="hidden" value="TB"/>
+
+    <div class="header">
+        <div class="logo">
+            <h1><a href="http://www.taobao.com"><i class="iconfont tb-logo-cn">&#x35b8;</i><i class="iconfont tb-logo-url">&#x35b7;</i></a></h1>
+            <h2 class="tsl" data-phase-id="r_p_registration">账户注册</h2>
+        </div>
+    </div>
+
+
+    <div class="steps">
+        <ol>
+            <li  class="active" ><i>1</i><span class="tsl" data-phase-id="r_p_createAccount">设置登录名</span></li>
+            <li ><i>2</i><span class="tsl" data-phase-id="r_p_fillUserInfo">填写账户信息</span></li>
+            <li ><i class="iconfont">&#x3447;</i><span class="tsl" data-phase-id="r_p_regSuc">注册成功</span></li>
+        </ol>
+
+
+        <div class="tsl-switcher">
+            <a href="http://reg.taobao.com/member/new_register.jhtml"  class="current" >中文</a>
+            |
+            <a href="http://reg.taobao.com/member/new_register.jhtml?_lang=en&amp;_regfrom=TB_OVERSEA"  >English</a>
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="form-list form-main-list">
+            <form id="J_EmailForm" method="post" action="#">
+                <div class="from-group">
+                    <div class="form-item">
+                        <span class="form-label tsl" data-phase-id="r_p_email">电子邮箱</span>
+                        <input class="form-text" id="J_Email" name="email" type="text" value="" placeholder="请输入你的电子邮箱"
+                               data-inner_placeholder="r_p_input_inner_enterEmail" data-outer_placeholder="r_p_input_enterEmail" />
+                        <div class="msg" data-type="info" data-show="0" id="J_MsgEmail"></div>
                     </div>
 
-                    <div class="pw-strength pw-weak" id="J_PwdStrength">
-                        <div class="pw-bar"></div>
-                        <div class="pw-letter">
-                            <span class="tsl" data-phase-id="r_1_8">��</span>
-                            <span class="tsl" data-phase-id="r_1_9">��</span>
-                            <span class="tsl" data-phase-id="r_1_10">ǿ</span>
-                        </div>
+                    <div class="form-item form-item-checkcode">
+                        <span class="form-label tsl" data-phase-id="r_p_imgChkCode">验证码</span>
+                        <input id="J_CheckCodeInput" name="imgChkcode" class="form-text checkcode-text" type="text" value="" />
+                        <div id="J_CheckCodeContainer" class="checkcode-container dn" data-imgurl="http://pin.aliyun.com/get_img?type=150_40&amp;identity=member1.taobao.com&amp;sessionid=ALI17d172f542f40f41eb05436ccc6eb6c4" data-audiourl="http://pin.aliyun.com/get_audio?identity=member1.taobao.com&amp;sessionid=ALI17d172f542f40f41eb05436ccc6eb6c4" data-apiserver="http://pin.aliyun.com/"></div>
+                        <span id="J_CheckCodeMsgRefer" class="text-input-refer"></span>
+                        <div class="msg" data-show="0" id="J_MsgCheckCode"></div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <div class="form-item">
+                        <input class="form-checkbox" type="checkbox" name="" id="J_Agreement" checked />
 
+                        <label for="J_Agreement" class="f12 tsl" data-phase-id="r_p_agreementTip">
+                            同意<a href="http://www.taobao.com/go/chn/member/agreement.php" target="_blank">《淘宝服务协议》</a>和<a href="http://ab.alipay.com/agreement/contract.htm" target="_blank">《支付宝服务协议》</a>
+                        </label>
 
-
-                <div class="kv-item">
-                    <span class="kv-label"><label for="J_RePwd" class="tsl" data-phase-id="r_1_4">ȷ�����룺</label></span>
-                    <input class="i-text" id="J_RePwd" type="password" name="_fm.n._0.c" value="" disabled="">
-                    <div class="msg-box">
-                        <div class="msg-weak msg-inline hide" id="J_RePwdTip" style="visibility: hidden;">
-                            <i></i>
-                            <div class="msg-cnt">
-
-                            </div>
-                        </div>
                     </div>
-                </div>
-
-
-
-                <div class="kv-item">
-                    <span class="kv-label"><label for="J_Email" class="tsl" data-phase-id="r_1_2">Email��</label></span>
-                    <input class="i-text" id="J_Email" name="_fm.n._0.n" value="" type="text">
-
-                    <div class="msg-box">
-                        <div class="msg-weak msg-inline show msg-error" id="J_EmailTip" style="visibility: visible;">
-                            <i></i>
-                            <div class="msg-cnt">����Ϊ��</div>
-                        </div>
+                    <div class="form-item form-item-short">
+                        <button type="submit" class="btn btn-large tsl" data-phase-id="r_p_next" id="J_BtnEmailForm">下一步</button>
+                        <div class="msg" data-show="0" id="J_MsgEmailForm"></div>
                     </div>
-                    <div class="num-tip" id="J_e" style="visibility: hidden;"></div>
-                </div>
-
-                <div class="kv-item">
-                    <span class="kv-label"><label for="J_Code" class="tsl" data-phase-id="r_1_5">��֤�룺</label></span>
-                    <input class="i-shorttext" id="J_Code" type="text" autocomplete="off" name="jJrT/JOeOYPiFDRS5KGYXbzOjRNzDBR/BhVq9tA4XPYK27JfVDwq/DV3vQmjJG6oN6oPwbHyvNL4mcdkTwfWuE66" maxlength="4">
-                    <div id="J_CheckCode" class="checkcode checkcode-v" data-imgurl="http://pin.aliyun.com/get_img?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78" data-audiourl="http://pin.aliyun.com/get_audio?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78" data-apiserver="http://pin.aliyun.com/"><div class="reg-checkcode-img" id="J_ImgCode1" style="display: block;"><img id="J_CheckCodeImg1" width="100" height="30" onmousedown="return false;" src="http://pin.aliyun.com//get_img?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78&amp;kjtype=default&amp;t=1404905986011"><a href="#nogo" onmousedown="return false;" role="button" title="���»�ȡ��֤��" aria-label="���»�ȡ��֤��" id="J_ImgRefresher1" class="reg-checkcode-refresher">���»�ȡ��֤��</a></div><div class="reg-checkcode-audio" id="J_AudioCode1" style="display: none;"><span class="reg-audio-state" id="J_AudioState1"><a href="#nogo" class="reg-audio-state-text" id="J_AudioStateText1" onmousedown="return false;"></a><span class="reg-audio-state-progress" id="J_AudioStateProgress1"></span></span><a href="#nogo" role="button" onmousedown="return false;" title="���»�ȡ��֤��" aria-label="���»�ȡ��֤��" id="J_AudioRefresher1" class="reg-checkcode-refresher">���»�ȡ��֤��</a><a href="#nogo" role="button" onmousedown="return false;" title="��ȡͼƬ��֤��" aria-label="��ȡͼƬ��֤��" id="J_ImgSwitcher1" class="reg-checkcode-switcher reg-img-switcher">��ȡͼƬ��֤��</a></div></div>
-
-                    <div class="msg-box w180">
-                        <div class="msg-weak msg-inline hide" id="J_CheckCodeTip" style="visibility: hidden;">
-                            <i></i>
-                            <div class="msg-cnt tsl">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="kv-item form-meta">
-                    <input type="hidden" value="2,1,2,1" name="CtrlVersion">
-                    <input type="hidden" value="" name="tid">
-                    <input name="_fm.n._0.q" type="hidden" value="" style="display:none">
-                    <input name="_fm.n._0.qu" type="hidden" value="" style="display:none">
-                    <input name="_fm.n._0.qui" type="hidden" value="" style="display:none">
-                    <input name="_fm.n._0.quic" type="hidden" value="" style="display:none">
-                    <input name="_fm.n._0.quick" type="hidden" value="" style="display:none">
-                    <input name="_fm.n._0.pa" type="hidden" value="1" id="J_PwdStrengthInput">
-
-                    <input type="hidden" name="randomName" value="" id="randomName">
-                    <input type="hidden" name="focusCount" id="focusCount" value="">
-                    <input type="hidden" name="keyupCount" id="keyupCount" value="">
-                    <button class="btn-long tsl" data-phase-id="r_1_6" id="J_BtnBasicInfoForm" type="submit">ͬ��Э�鲢ע��</button>
-
-                    <div class="agreement">
-                        <a href="http://reg.taobao.com/member/agreement.jhtml" target="_blank" id="J_TbAgreementHandle" data-url="http://reg.taobao.com/member/agreement.jhtml" class="tsl" data-phase-id="r_1_7">���Ա�����Э�顷</a>
-                        <div class="agreement-content" id="J_AgreementContainer"></div>
+                    <div class="form-item f12 tsl" data-phase-id="r_1e_useMobileTip">
+                        没有邮箱？<a href="http://reg.taobao.com/member/reg/fill_mobile.htm">使用手机号注册&gt;</a>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+    <!--手机验证START-->
+    <div class="ks-dialog mobile-check" id='J_MobileCheck'>
+        <div class="ks-dialog-content">
+            <a href="javascript:void('close')" class="ks-dialog-close ks-overlay-close" role="button">
+                <span class="iconfont ks-dialog-close-x ks-overlay-close-x">&#x3432;</span>
+            </a>
+            <div class="ks-dialog-header">
+                <h3 class="tsl" data-phase-id="r_p_fillCheckcode">填写校验码</h3>
+                <div class="msg tsl" data-phase-id="r_1e_bindMobileTip" data-type="info" data-show="1">
+                    请绑定你的手机，用于保护账户和资金安全，该服务免费
+                </div>
+            </div>
+            <div class="ks-dialog-body">
+                <div class="form-list">
+                    <form action="" method="post" id="J_MobileCodeForm">
+                        <div class="from-group">
+                            <div class="form-item">
+                                <span class="form-label tsl" data-phase-id="r_p_countryRegion">所在国家/地区</span>
+                                <select id="J_Area" name="mobile_area">
+                                    <option value="1" data-pattern="^(86){0,1}1\d{10}$" check-key="^(86){0,1}1\d{10}$" data-code='86'  class="tsl" data-phase-id="r_c_1">中国大陆</option>
+                                    <option value="2" data-pattern="^(00){0,1}(852){1}0{0,1}[1,5,6,9](?:\d{7}|\d{8}|\d{12})$" check-key="^(00){0,1}(852){1}0{0,1}[1,5,6,9](?:\d{7}|\d{8}|\d{12})$" data-code='852'  class="tsl" data-phase-id="r_c_2">香港</option>
+                                    <option value="3" data-pattern="^(00){0,1}(853){1}6\d{7}$" check-key="^(00){0,1}(853){1}6\d{7}$" data-code='853'  class="tsl" data-phase-id="r_c_3">澳门</option>
+                                    <option value="4" data-pattern="^(00){0,1}(886){1}0{0,1}[6,7,9](?:\d{7}|\d{8}|\d{10})$" check-key="^(00){0,1}(886){1}0{0,1}[6,7,9](?:\d{7}|\d{8}|\d{10})$" data-code='886'  class="tsl" data-phase-id="r_c_4">台湾</option>
+                                    <option value="5" data-pattern="^(00){0,1}(82){1}0{0,1}[7,1](?:\d{8}|\d{9})$" check-key="^(00){0,1}(82){1}0{0,1}[7,1](?:\d{8}|\d{9})$" data-code='82'  class="tsl" data-phase-id="r_c_5">韩国</option>
+                                    <option value="6" data-pattern="^(00){0,1}(81){1}0{0,1}[7,8,9](?:\d{8}|\d{9})$" check-key="^(00){0,1}(81){1}0{0,1}[7,8,9](?:\d{8}|\d{9})$" data-code='81'  class="tsl" data-phase-id="r_c_6">日本</option>
+                                    <option value="7" data-pattern="^(00){0,1}(1){1}\d{10,12}$" check-key="^(00){0,1}(1){1}\d{10,12}$" data-code='1'  class="tsl" data-phase-id="r_c_7">美国</option>
+                                    <option value="8" data-pattern="^(00){0,1}(1){1}\d{10}$" check-key="^(00){0,1}(1){1}\d{10}$" data-code='1'  class="tsl" data-phase-id="r_c_8">加拿大</option>
+                                    <option value="9" data-pattern="^(00){0,1}(44){1}[347-9](\d{8,9}|\d{11,12})$" check-key="^(00){0,1}(44){1}[347-9](\d{8,9}|\d{11,12})$" data-code='44'  class="tsl" data-phase-id="r_c_9">英国</option>
+                                    <option value="10" data-pattern="^(00){0,1}(61){1}4\d{8,9}$" check-key="^(00){0,1}(61){1}4\d{8,9}$" data-code='61'  class="tsl" data-phase-id="r_c_10">澳大利亚</option>
+                                    <option value="11" data-pattern="^(00){0,1}(65){1}[13689]\d{6,7}$" check-key="^(00){0,1}(65){1}[13689]\d{6,7}$" data-code='65'  class="tsl" data-phase-id="r_c_11">新加坡</option>
+                                    <option value="12" data-pattern="^(00){0,1}(60){1}1\d{8}$" check-key="^(00){0,1}(60){1}1\d{8}$" data-code='60'  class="tsl" data-phase-id="r_c_12">马来西亚</option>
+                                    <option value="13" data-pattern="^(00){0,1}(66){1}[13456789]\d{7,8}$" check-key="^(00){0,1}(66){1}[13456789]\d{7,8}$" data-code='66'  class="tsl" data-phase-id="r_c_13">泰国</option>
+                                    <option value="14" data-pattern="^(00){0,1}(84){1}[1-9]\d{6,9}$" check-key="^(00){0,1}(84){1}[1-9]\d{6,9}$" data-code='84'  class="tsl" data-phase-id="r_c_14">越南</option>
+                                    <option value="15" data-pattern="^(00){0,1}(63){1}[24579](\d{7,9}|\d{12})$" check-key="^(00){0,1}(63){1}[24579](\d{7,9}|\d{12})$" data-code='63'  class="tsl" data-phase-id="r_c_15">菲律宾</option>
+                                    <option value="16" data-pattern="^(00){0,1}(62){1}[2-9]\d{7,11}$" check-key="^(00){0,1}(62){1}[2-9]\d{7,11}$" data-code='62'  class="tsl" data-phase-id="r_c_16">印度尼西亚</option>
+                                    <option value="17" data-pattern="^(00){0,1}(49){1}1(\d{5,6}|\d{9,12})$" check-key="^(00){0,1}(49){1}1(\d{5,6}|\d{9,12})$" data-code='49'  class="tsl" data-phase-id="r_c_17">德国</option>
+                                    <option value="18" data-pattern="^(00){0,1}(39){1}[37]\d{8,11}$" check-key="^(00){0,1}(39){1}[37]\d{8,11}$" data-code='39'  class="tsl" data-phase-id="r_c_18">意大利</option>
+                                    <option value="19" data-pattern="^(00){0,1}(33){1}[168](\d{5}|\d{7,8})$" check-key="^(00){0,1}(33){1}[168](\d{5}|\d{7,8})$" data-code='33'  class="tsl" data-phase-id="r_c_19">法国</option>
+                                    <option value="20" data-pattern="^(00){0,1}(7){1}[13489]\d{9,11}$" check-key="^(00){0,1}(7){1}[13489]\d{9,11}$" data-code='7'  class="tsl" data-phase-id="r_c_20">俄罗斯</option>
+                                    <option value="21" data-pattern="^(00){0,1}(64){1}[278]\d{7,9}$" check-key="^(00){0,1}(64){1}[278]\d{7,9}$" data-code='64'  class="tsl" data-phase-id="r_c_21">新西兰</option>
+                                    <option value="22" data-pattern="^(00){0,1}(31){1}6\d{8}$" check-key="^(00){0,1}(31){1}6\d{8}$" data-code='31'  class="tsl" data-phase-id="r_c_22">荷兰</option>
+                                    <option value="23" data-pattern="^(00){0,1}(46){1}[124-7](\d{8}|\d{10}|\d{12})$" check-key="^(00){0,1}(46){1}[124-7](\d{8}|\d{10}|\d{12})$" data-code='46'  class="tsl" data-phase-id="r_c_23">瑞典</option>
+                                    <option value="24" data-pattern="^(00){0,1}(380){1}[3-79]\d{8,9}$" check-key="^(00){0,1}(380){1}[3-79]\d{8,9}$" data-code='380'  class="tsl" data-phase-id="r_c_24">乌克兰</option>
+                                </select>
+                            </div>
+                            <div class="form-item">
+                                <span class="form-label tsl" data-phase-id="r_p_mobileNum">手机号码</span>
+                                <div class="mobile-text">
+                                    <span class="mobile-text-code" id="J_AreaCode"></span>
+                                    <input class="form-text mobile-text-input" id="J_Mobile" name="mobile" type="text" placeholder="请输入手机号码"
+                                           data-inner_placeholder="r_p_input_inner_enterMobile" data-outer_placeholder="r_p_input_enterMobile" value="" />
+                                    <div class="msg" data-show="0" id="J_MsgMobile"></div>
+                                </div>
+                            </div>
+                            <div class="form-item form-item-uncode" id="J_FormItemMobileCode">
+                                <span class="form-label tsl" data-phase-id="r_p_checkcode">校验码</span>
+                                <input class="form-text checkcode-text" id="J_MobileCode" name="code" type="text" value="" />
+                                <button id="J_BtnMobileCode" class="btn btn-white btn-weak tsl" data-phase-id="r_p_getCheckcodeTip" type="button">免费获取校验码</button>
+                                <div class="msg" data-show="0" id="J_MsgMobileCode"></div>
+                            </div>
+                            <div class="form-item">
+                                <button type="submit" class="btn btn-normal tsl" data-phase-id="r_p_next" id="J_BtnMobileCodeForm">下一步</button>
+                                <div class="msg" data-show="0" id="J_MsgMobileCodeForm"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--手机验证END-->
 
 
+<!-- UE -->
+<div class="ue-suggest">
+    <img width="18" height="18" alt="注册改进建议" src="http://img04.taobaocdn.com/tps/i4/T1Pt0FXmJcXXXXXXXX-18-18.png">
+    <a target="_blank" href="http://ur.taobao.com/survey/view.htm?id=587">"淘宝注册"改进建议</a>
 </div>
 
 
-</div>
+<!-- 页脚 -->
+<div class="footer">
+    <div class="footer-hd">
+        <p>
+            <a href="//page.1688.com/shtml/about/ali_group1.shtml">阿里巴巴集团</a>
+            <b>|</b>
+            <a href="//www.alibaba.com">阿里巴巴国际站</a>
+            <b>|</b>
+            <a href="//www.1688.com">阿里巴巴中国站</a>
+            <b>|</b>
+            <a href="//www.aliexpress.com">全球速卖通</a>
+            <b>|</b>
+            <a href="//www.taobao.com">淘宝网</a>
+            <b>|</b>
+            <a href="//www.tmall.com">天猫</a>
+            <b>|</b>
+            <a href="//ju.taobao.com">聚划算</a>
+            <b>|</b>
+            <a href="//www.etao.com">一淘</a>
+            <b>|</b>
+            <a href="//www.alimama.com">阿里妈妈</a>
+            <b>|</b>
+            <a href="//www.aliyun.com">阿里云计算</a>
+            <b>|</b>
+            <a href="//www.yunos.com">云OS</a>
+            <b>|</b>
+            <a href="//www.net.cn">万网</a>
+            <b>|</b>
+            <a href="//www.alipay.com">支付宝</a>
+        </p>
+    </div>
+    <div class="footer-bd">
+        <p>
+            <a href="//www.taobao.com/about">关于淘宝</a>
+            <a href="//www.taobao.com/about/partners.php">合作伙伴</a>
+            <a href="//pro.taobao.com">营销中心</a>
+            <a href="//service.taobao.com/support/main/service_route.htm">联系客服</a>
+            <a href="//open.taobao.com">开放平台</a>
+            <a href="//www.taobao.com/about/join.php">诚征英才</a>
+            <a href="//www.taobao.com/about/contact.php">联系我们</a>
+            <a href="//www.taobao.com/sitemap.php">网站地图</a>
+            <a href="//www.taobao.com/about/copyright.php">法律声明</a>
+            <em>&copy; 2014 Taobao.com 版权所有</em>
+        </p>
+        <p>
+            <span>网络文化经营许可证：<a href="//img04.taobaocdn.com/tps/i4/T1ysdvXtNeXXcPpEkQ-972-636.jpg">文网文[2010]040号</a></span>
+            <b>|</b>
+            <span>增值电信业务经营许可证：浙B2-20080224-1</span>
+            <b>|</b>
+            <span>信息网络传播视听节目许可证：1109364号</span>
+        </p>
+    </div>
+    <div class="footer-ft">
+        <a href="//www.pingpinganan.gov.cn/web/index.aspx?file=index.aspx"><img width="36" height="36" src="//img01.taobaocdn.com/tps/i1/T1FeW3XXNfXXXXXXXX-36-36.gif"></a>
+        <a href="//idinfo.zjaic.gov.cn/bscx.do?method=hddoc&id=33018400000067" class="mod mod-a"></a>
+        <a href="//idinfo.zjaic.gov.cn/bscx.do?&method=hddoc&id=33018400000067" class="mod mod-b"></a>
+        <a href="//www.theclimategroup.org.cn/about/friend" class="mod mod-c"></a>
+        <a href="https://ss.cnnic.cn/verifyseal.dll?&sn=2010062300100001357&pa=20100701" class="mod mod-d"></a>
+        <a href="//www.ppaaol.com/verifySite.do?id=1051" class="mod mod-e"></a>
+    </div>
+    <div class="footer-toy"></div>
+
+    <div id="server-num" style="color:#FFF;font-size:11px;text-align:center">register010096236113.cm3</div>
+</div><!-- 页脚 -->
+
+<!-- S GLOBAL JS -->
+<script src="http://g.tbcdn.cn/??kissy/k/1.4.2/seed-min.js,tb/global/2.9.7/global-min.js"></script>
+<!-- E GLOBAL JS -->
+<script type="text/javascript">
+    TB.Global.blacklist = ['fn-cart'];
+    TB.Global.init();
+</script>
+
+<script type="text/javascript">
+
+    TRLang={
+
+        "r_p_input_enterMobile" : "请输入你的手机号码",
+        "r_p_input_enterEmail" : "请输入你的电子邮箱",
+        "r_p_input_reEnterPwd" : "请再次输入登录密码",
+        "r_p_input_enterUserName" : "请设置会员名",
+        "r_p_input_enterPwd" : "请输入登录密码",
+        "r_p_input_enterImgCode" : "请输入图片中的字符，不区分大小写",
+        "r_ui_recommendNickTip" : "推荐使用",
+
+        "ERROR_GENERAL_MOBILEPHONE_EMPTY" : "请输入你的手机号码",
+
+        "ERROR_GENERAL_MOBILE_MALFORM" : "手机号码格式不正确，请重新输入",
+        "ERROR_REGISTER_MOBILE_IN_BLACK" : "此手机号码注册频率过高，建议更换",
+
+        "ERROR_REGISTER_MOBILE_UNAVAILABLE" : "此手机号码绑定的帐户数已达上限，请更换",
+        "ERROR_REGISTER_CHECKCODE_VERIFY_LIMIT" : "校验码错误次数已经超过最大次数，请重新获取校验码",
+        "ERROR_REGISTER_CHECKCODE_SEND_LIMIT":"此手机发送校验码已经达到上限，请在24小时后重试",
+        "ERROR_REGISTER_CHECKCODE_SEND_TOO_FREQUENT" : "手机校验码发送频率太快，请稍后重试",
+
+        "ERROR_MALFORM_NICK_NAME" : "会员名为5-25个字符",
+        "ERROR_MALFORM_NICK_NAME_TOO_SHORT" : "会员名为5-25个字符",
+        "ERROR_MALFORM_NICK_NAME_TOO_LONG" : "会员名为5-25个字符",
+        "ERROR_MISS_NICK_NAME" : "请设置会员名",
+        "ERROR_MALFORM_NICK_NAME_INVALID_CHARACTER" : "该会员名包含了非法字符{malWord}，请重新输入。",
+        "ERROR_DUP_NICK_NAME":"该会员名已被使用。你可以:<br/>1、重新输入或选择推荐的会员名。<br/>2、使用该会员名<a href='https://login.taobao.com/member/login.jhtml' target='_blank'>登录</a>。",
+        "ERROR_UNDERLINE":"会员名首位和末位不能是下划线'_'",
+        "ERROR_GENERAL_NICK_ALL_NUM" : "不能全部为数字",
+        "ERROR_BANNED_WORDS" : "会员名不能含有敏感词",
+        "ERROR_PASSWORD_LIKE_NICK" : "密码和账户名太相似",
+
+        "ERROR_REGISTER_CHECKCODE_NOT_MATCH" : "校验码不正确，请重新输入",
+        "ERROR_REGISTER_CHECKCODE_MALFORM" : "校验码是6位数字，请重新输入",
+
+        "ERROR_IMAGECHECKCODE_EMPTY" : "请输入验证码",
+        "ERROR_IMAGECHECKCODE_MALFORM" : "验证码长度为4位",
+        "ERROR_IMAGECHECKCODE_INVALID" : "验证码不正确，请重新输入",
+        "ERROR_GENERAL_IMAGECHECKCODE_NOT_MATCH" : "验证码不正确，请重新输入",
+
+        "ERROR_REGISTER_EMAIL_IN_BLACK" : "此邮箱暂不支持作为登录名，请更换",
+        "ERROR_GENERAL_EMAIL_EMPTY" : "请输入你的电子邮箱",
+        "ERROR_GENERAL_EMAIL_MALFORM" : "邮箱格式不正确，请重新输入",
+        "ERROR_GENERAL_EMAIL_MALFORM_TOO_LONG" : "邮箱长度最大为60个字符",
+        "ERROR_REGISTER_EMAIL_UNAVAILABLE" : "此邮箱作为登录名已存在，请更换邮箱或登录",
+
+        "ERROR_REGISTER_ACCOUNT_EXIST_IN_CURRENT" : "你的账户已经激活",
+        "ERROR_REGISTER_ACCOUNT_EXIST_OTHER_BU" : "账户已经存在",
+
+        "ERROR_REGISTER_PASSWORD_TOO_SIMPLE" : "该密码存在安全隐患，请更换",
+
+        "GENERIC_FAILURE" : "网络繁忙，请稍后再试",
+        "ERROR_GENERAL_OUTER_SYSTEM_FAIL" : "网络繁忙，请稍后再试",
+        "ERROR_GENERAL_ILLEGAL_PARAM" : "参数错误",
+
+        "TIP_REGISTER_CHECKCODE_SENT" : "校验码已发送至你的手机，请查收"
+
+    };
+
+</script>
+
+
+
+<script >
+    TRConfig = {
+        "checkEmailUrl" : "http://reg.taobao.com/member/check_email.do?type=NormalRegistrationV2",
+        "resendCellUrl" : "http://reg.taobao.com/member/checkcode/send_cell_checkcode.do?resend=true&type=NormalRegistrationV2",
+        "sendCellUrl" : "http://reg.taobao.com/member/checkcode/send_cell_checkcode.do?imgChked=true&type=NormalRegistrationV2",
+        "checkCellUrl" : "http://reg.taobao.com/member/checkcode/check_cell_checkcode.do?type=NormalRegistrationV2",
+        "sendEmailUrl" : "http://reg.taobao.com/member/checkcode/send_email_check_code.do?type=NormalRegistrationV2",
+        "emailSentUrl" : "http://reg.taobao.com/member/reg/email_sent.htm",
+        "showMobileCheck" : true
+    };
+</script>
+<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/tsl.js" charset="utf-8"></script>
+<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/??reg.js,atp.js,q.js" charset="utf-8"></script>
+<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/components/??xerror.js,timeoutbtn.js,checkcode.js,message.js,emailsuggest.js,mobile.js,email.js" charset="utf-8"></script>
+<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/utils/??messages.js,checkenable.js" charset="utf-8"></script>
+<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/email-reg.js" charset="utf-8"></script>
+
 </body>
-</html>
