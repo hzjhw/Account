@@ -1,43 +1,32 @@
 
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
-    <!-- ************************** new ********************************* -->
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-    <link rel="shortcut icon" href="http://pics.taobao.com//favicon.ico" type="image/x-icon" />
-    <link href="scripts/register/reg.css" rel="stylesheet" type="text/css" />
-
-    <script type="" src="scripts/register/jquery.min.js"></script>
-    <meta name="data-spm" content="a2145" />
-    <title>新会员免费注册</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <link rel="search" type="application/opensearchdescription+xml" href="http://assets.taobaocdn.com//plugins/opensearch/provider.xml" title="淘宝购物" />
-    <!-- <link rel="stylesheet" href="http://assets.taobaocdn.com//app/uc/register.css?t=20090813.css" />  -->
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="styles/register/reg.css" rel="stylesheet" type="text/css" />
+    <script type="" src="scripts/vendor/jquery.min.js"></script>
+    <title>浼氬憳娉ㄥ唽</title>
 </head>
-
-<body class="chl-reg" data-spm="5765625">
+<body class="chl-reg">
 <script type="text/javascript">
-    window.onload=function(){
-
-
+    $(function(){
         $('#J_Nick').mouseover(function(){
             var usern=$('#J_Nick').val();
-            if( usern == ''){ $('.msg-cnt').eq(0).html("要4-19个字符");
+            if( usern == ''){ $('.msg-cnt').eq(0).html("要4-19锟斤拷锟街凤拷");
                 $(".msg-weak i").eq(0).css("background-position"," 0 -160px");
             }
         });
         $('#J_Pwd').mouseover(function(){
             var usern=$('#J_Pwd').val();
-            if( usern == ''){ $('.msg-cnt').eq(1).html("要6-19个字符a");
+            if( usern == ''){ $('.msg-cnt').eq(1).html("要6-19锟斤拷锟街凤拷a");
                 $(".msg-weak i").eq(1).css("background-position"," 0 -160px");
             }
         });
         $('#J_Email').mouseover(function(){
             var email=$('#J_Email').val();
-            if( email == ''){ $('.msg-cnt').eq(3).html("要4-19个字符a");
+            if( email == ''){ $('.msg-cnt').eq(3).html("要4-19锟斤拷锟街凤拷a");
                 $(".msg-weak i").eq(3).css("background-position"," 0 -160px");
             }
         });
@@ -46,10 +35,10 @@
             var username=$('#J_Nick').val();
             var reg=/^[a-zA-Z0-9_]{4,19}$/;
             if(!reg.test(username)){
-                $('.msg-cnt').eq(0).html("4-19个字符");
+                $('.msg-cnt').eq(0).html("4-19锟斤拷锟街凤拷");
                 $(".msg-weak i").eq(0).css("background-position"," 0 0");
             }else{
-                $('.msg-cnt').eq(0).html("一旦注册成功不能修改");
+                $('.msg-cnt').eq(0).html("一锟斤拷注锟斤拷晒锟斤拷锟斤拷锟斤拷薷锟�");
                 $(".msg-weak i").eq(0).css("background-position"," 0 -200px");
             }
 
@@ -58,14 +47,13 @@
             var password=$('#J_Pwd').val();
             var reg=/^[a-zA-Z0-9_]{6,19}$/;
             if(!reg.test(password)){
-                $('.msg-cnt').eq(1).html("6-19个字符");
+                $('.msg-cnt').eq(1).html("6-19锟斤拷锟街凤拷");
                 $(".msg-weak i").eq(1).css("background-position"," 0 0");
             }else{
-                $('.msg-cnt').eq(1).html("一旦注册成功不能修改");
+                $('.msg-cnt').eq(1).html("一锟斤拷注锟斤拷晒锟斤拷锟斤拷锟斤拷薷锟�");
                 $(".msg-weak i").eq(1).css("background-position"," 0 -200px");
                 $('#J_RePwd').css("background","#fff");
                 $('#J_RePwd').attr("disabled",false);
-               // $('#J_RePwd').removeAttr("disabled");
             }
 
 
@@ -75,21 +63,21 @@
             var email=$('#J_Email').val();
             var re = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
             if(!re.test(email)){
-                $('.msg-cnt').eq(3).html("错误");
+                $('.msg-cnt').eq(3).html("锟斤拷锟斤拷");
                 $(".msg-weak i").eq(3).css("background-position"," 0 0");
             }else{
-                $('.msg-cnt').eq(3).html("一旦注册成功不能修改");
+                $('.msg-cnt').eq(3).html("一锟斤拷注锟斤拷晒锟斤拷锟斤拷锟斤拷薷锟�");
                 $(".msg-weak i").eq(3).css("background-position"," 0 -200px");
             }
         });
         $('#J_RePwd').mouseout(function(){
             debugger
             var RePwd=$('#J_RePwd').val();;var password=$('#J_Pwd').val();
-            if(RePwd !== password){alert("密码不一样！"); return false;}
+            if(RePwd !== password){alert("锟斤拷锟诫不一锟斤拷"); return false;}
         });
         $('#J_RePwd').mouseover(function(){
             var RePwd=$('#J_RePwd').val();
-            if( RePwd == ''){ $('.msg-cnt').eq(2).html("再输一次密码");
+            if( RePwd == ''){ $('.msg-cnt').eq(2).html("锟斤拷锟斤拷一锟斤拷锟斤拷锟斤拷");
                 $(".msg-weak i").eq(2).css("background-position"," 0 -160px");
             }
         });
@@ -102,27 +90,25 @@
             var reg=/^[a-zA-Z0-9_]{4,19}$/;
             var rega=/^[a-zA-Z0-9_]{6,19}$/;
             var ree = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-            if(username ==''){alert("会员名为空！");return false;}
-            if(!reg.test(username)){alert("会员名错误！"); return false;}
-            if(!rega.test(password) ){alert("密码错误！"); return false;}
-            if(email ==''){alert("email为空！");  return false;}
-            if(!ree.test(email)){alert("email错误！"); return false;}
+            if(username ==''){alert("锟斤拷员锟斤拷为锟秸ｏ拷");return false;}
+            if(!reg.test(username)){alert("锟斤拷员锟斤拷锟斤拷锟�"); return false;}
+            if(!rega.test(password) ){alert("锟斤拷锟斤拷锟斤拷锟�"); return false;}
+            if(email ==''){alert("email为锟秸ｏ拷");  return false;}
+            if(!ree.test(email)){alert("email锟斤拷锟斤拷"); return false;}
             document.cookie=username+'='+encodeURIComponent(password);
-            alert("注册成功！")
+            alert("注锟斤拷晒锟斤拷锟�")
             window.location.href="/login.html";
         });
-
-
-    }
+    })
 </script>
 
 <div id="content" data-spm="1000503">
 <div class="steps step-1">
 
     <ol class="xsteps">
-        <li>填写账户信息</li>
-        <li>验证账户信息</li>
-        <li>注册成功</li>
+        <li>锟斤拷写锟剿伙拷锟斤拷息</li>
+        <li>锟斤拷证锟剿伙拷锟斤拷息</li>
+        <li>注锟斤拷晒锟�</li>
     </ol>
 
 </div>
@@ -164,18 +150,18 @@
 
 
                 <div class="kv-item kv-nick">
-                    <span class="kv-label"><label for="J_Nick" class="tsl" data-phase-id="r_1_2">会员名：</label></span>
+                    <span class="kv-label"><label for="J_Nick" class="tsl" data-phase-id="r_1_2">锟斤拷员锟斤拷</label></span>
                     <input class="i-text" id="J_Nick" name="_fm.n._0.n" value="" type="text">
 
                     <div class="msg-box">
                         <div class="msg-weak msg-inline show msg-error" id="J_NickTip" style="visibility: visible;">
                             <i></i>
-                            <div class="msg-cnt">不能为空</div>
+                            <div class="msg-cnt">锟斤拷锟斤拷为锟斤拷</div>
                         </div>
                     </div>
                     <div class="num-tip" id="J_NumTip" style="visibility: hidden;"></div>
                     <div class="nick-suggest" id="J_NickSuggest" style="display: none;">
-                        <span class="nick-suggest-tit tsl" data-phase-id="r_1_11">推荐你使用：</span>
+                        <span class="nick-suggest-tit tsl" data-phase-id="r_1_11">锟狡硷拷锟斤拷使锟矫ｏ拷</span>
                         <ul id="J_NickSuggestList">
                         </ul>
                     </div>
@@ -183,20 +169,20 @@
 
 
                 <div class="kv-item">
-                    <span class="kv-label"><label for="J_Pwd" class="tsl" data-phase-id="r_1_3">登录密码：</label></span>
+                    <span class="kv-label"><label for="J_Pwd" class="tsl" data-phase-id="r_1_3">锟斤拷录锟斤拷锟诫：</label></span>
                     <input class="i-text" id="J_Pwd" name="_fm.n._0.p" type="password" value="">
                     <div class="msg-box">
                         <div class="msg-weak msg-inline show msg-error" id="J_PwdTip" style="visibility: visible;">
                             <i></i>
-                            <div class="msg-cnt">不能为空</div>
+                            <div class="msg-cnt">锟斤拷锟斤拷为锟斤拷</div>
                         </div>
                     </div>
 
                     <div class="pw-strength pw-weak" id="J_PwdStrength">
                         <div class="pw-bar"></div>
                         <div class="pw-letter">
-                            <span class="tsl" data-phase-id="r_1_8">弱</span>
-                            <span class="tsl" data-phase-id="r_1_9">中</span>
+                            <span class="tsl" data-phase-id="r_1_8">锟斤拷</span>
+                            <span class="tsl" data-phase-id="r_1_9">锟斤拷</span>
                             <span class="tsl" data-phase-id="r_1_10">强</span>
                         </div>
                     </div>
@@ -205,7 +191,7 @@
 
 
                 <div class="kv-item">
-                    <span class="kv-label"><label for="J_RePwd" class="tsl" data-phase-id="r_1_4">确认密码：</label></span>
+                    <span class="kv-label"><label for="J_RePwd" class="tsl" data-phase-id="r_1_4">确锟斤拷锟斤拷锟诫：</label></span>
                     <input class="i-text" id="J_RePwd" type="password" name="_fm.n._0.c" value="" disabled="">
                     <div class="msg-box">
                         <div class="msg-weak msg-inline hide" id="J_RePwdTip" style="visibility: hidden;">
@@ -220,22 +206,22 @@
 
 
                 <div class="kv-item">
-                    <span class="kv-label"><label for="J_Email" class="tsl" data-phase-id="r_1_2">Email：</label></span>
+                    <span class="kv-label"><label for="J_Email" class="tsl" data-phase-id="r_1_2">Email锟斤拷</label></span>
                     <input class="i-text" id="J_Email" name="_fm.n._0.n" value="" type="text">
 
                     <div class="msg-box">
                         <div class="msg-weak msg-inline show msg-error" id="J_EmailTip" style="visibility: visible;">
                             <i></i>
-                            <div class="msg-cnt">不能为空</div>
+                            <div class="msg-cnt">锟斤拷锟斤拷为锟斤拷</div>
                         </div>
                     </div>
                     <div class="num-tip" id="J_e" style="visibility: hidden;"></div>
                 </div>
 
                 <div class="kv-item">
-                    <span class="kv-label"><label for="J_Code" class="tsl" data-phase-id="r_1_5">验证码：</label></span>
+                    <span class="kv-label"><label for="J_Code" class="tsl" data-phase-id="r_1_5">锟斤拷证锟诫：</label></span>
                     <input class="i-shorttext" id="J_Code" type="text" autocomplete="off" name="jJrT/JOeOYPiFDRS5KGYXbzOjRNzDBR/BhVq9tA4XPYK27JfVDwq/DV3vQmjJG6oN6oPwbHyvNL4mcdkTwfWuE66" maxlength="4">
-                    <div id="J_CheckCode" class="checkcode checkcode-v" data-imgurl="http://pin.aliyun.com/get_img?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78" data-audiourl="http://pin.aliyun.com/get_audio?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78" data-apiserver="http://pin.aliyun.com/"><div class="reg-checkcode-img" id="J_ImgCode1" style="display: block;"><img id="J_CheckCodeImg1" width="100" height="30" onmousedown="return false;" src="http://pin.aliyun.com//get_img?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78&amp;kjtype=default&amp;t=1404905986011"><a href="#nogo" onmousedown="return false;" role="button" title="重新获取验证码" aria-label="重新获取验证码" id="J_ImgRefresher1" class="reg-checkcode-refresher">重新获取验证码</a></div><div class="reg-checkcode-audio" id="J_AudioCode1" style="display: none;"><span class="reg-audio-state" id="J_AudioState1"><a href="#nogo" class="reg-audio-state-text" id="J_AudioStateText1" onmousedown="return false;"></a><span class="reg-audio-state-progress" id="J_AudioStateProgress1"></span></span><a href="#nogo" role="button" onmousedown="return false;" title="重新获取验证码" aria-label="重新获取验证码" id="J_AudioRefresher1" class="reg-checkcode-refresher">重新获取验证码</a><a href="#nogo" role="button" onmousedown="return false;" title="获取图片验证码" aria-label="获取图片验证码" id="J_ImgSwitcher1" class="reg-checkcode-switcher reg-img-switcher">获取图片验证码</a></div></div>
+                    <div id="J_CheckCode" class="checkcode checkcode-v" data-imgurl="http://pin.aliyun.com/get_img?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78" data-audiourl="http://pin.aliyun.com/get_audio?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78" data-apiserver="http://pin.aliyun.com/"><div class="reg-checkcode-img" id="J_ImgCode1" style="display: block;"><img id="J_CheckCodeImg1" width="100" height="30" onmousedown="return false;" src="http://pin.aliyun.com//get_img?identity=member1.taobao.com&amp;sessionid=ALI82d9cd066910d35ea5f382d09b318d78&amp;kjtype=default&amp;t=1404905986011"><a href="#nogo" onmousedown="return false;" role="button" title="锟斤拷锟铰伙拷取锟斤拷证锟斤拷" aria-label="锟斤拷锟铰伙拷取锟斤拷证锟斤拷" id="J_ImgRefresher1" class="reg-checkcode-refresher">锟斤拷锟铰伙拷取锟斤拷证锟斤拷</a></div><div class="reg-checkcode-audio" id="J_AudioCode1" style="display: none;"><span class="reg-audio-state" id="J_AudioState1"><a href="#nogo" class="reg-audio-state-text" id="J_AudioStateText1" onmousedown="return false;"></a><span class="reg-audio-state-progress" id="J_AudioStateProgress1"></span></span><a href="#nogo" role="button" onmousedown="return false;" title="锟斤拷锟铰伙拷取锟斤拷证锟斤拷" aria-label="锟斤拷锟铰伙拷取锟斤拷证锟斤拷" id="J_AudioRefresher1" class="reg-checkcode-refresher">锟斤拷锟铰伙拷取锟斤拷证锟斤拷</a><a href="#nogo" role="button" onmousedown="return false;" title="锟斤拷取图片锟斤拷证锟斤拷" aria-label="锟斤拷取图片锟斤拷证锟斤拷" id="J_ImgSwitcher1" class="reg-checkcode-switcher reg-img-switcher">锟斤拷取图片锟斤拷证锟斤拷</a></div></div>
 
                     <div class="msg-box w180">
                         <div class="msg-weak msg-inline hide" id="J_CheckCodeTip" style="visibility: hidden;">
@@ -261,10 +247,10 @@
                     <input type="hidden" name="randomName" value="" id="randomName">
                     <input type="hidden" name="focusCount" id="focusCount" value="">
                     <input type="hidden" name="keyupCount" id="keyupCount" value="">
-                    <button class="btn-long tsl" data-phase-id="r_1_6" id="J_BtnBasicInfoForm" type="submit">同意协议并注册</button>
+                    <button class="btn-long tsl" data-phase-id="r_1_6" id="J_BtnBasicInfoForm" type="submit">同锟斤拷协锟介并注锟斤拷</button>
 
                     <div class="agreement">
-                        <a href="http://reg.taobao.com/member/agreement.jhtml" target="_blank" id="J_TbAgreementHandle" data-url="http://reg.taobao.com/member/agreement.jhtml" class="tsl" data-phase-id="r_1_7">《淘宝服务协议》</a>
+                        <a href="http://reg.taobao.com/member/agreement.jhtml" target="_blank" id="J_TbAgreementHandle" data-url="http://reg.taobao.com/member/agreement.jhtml" class="tsl" data-phase-id="r_1_7">锟斤拷锟皆憋拷锟斤拷锟斤拷协锟介》</a>
                         <div class="agreement-content" id="J_AgreementContainer"></div>
                     </div>
                 </div>
