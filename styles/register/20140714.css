@@ -20,9 +20,9 @@
 .steps{height:46px;border-bottom:2px solid #e6e6e6;position:relative;}
 .steps ol{width:720px;margin:0 auto;}
 .steps ol li{display:inline;float:left;width:170px;padding-left:70px;height:46px;line-height:46px;font-size:16px;font-weight:bold;color:#999;font-family:"\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;}
-.steps ol li i{display:inline-block;zoom:1;*display:inline;margin-right:5px;width:24px;height:24px;text-align:center;font-style:normal;line-height:24px;font-size:14px;font-weight:bold;color:#FFF;background:url(/images/ico-circle2.png) no-repeat 0 0;}
+.steps ol li i{display:inline-block;zoom:1;*display:inline;margin-right:5px;width:24px;height:24px;text-align:center;font-style:normal;line-height:24px;font-size:14px;font-weight:bold;color:#FFF;background:url(/Account/images/ico-circle2.png) no-repeat 0 0;}
 .steps ol li.active{color:#3e3e3e;border-bottom:2px solid #ff4700;}
-.steps ol li.active i{background:url(/images/ico-circle1.png);}
+.steps ol li.active i{background:url(/Account/images/ico-circle1.png);}
 
 .tsl-switcher{position:absolute;right:0;top:15px;font-size:12px;}
 .tsl-switcher li{display:inline-block;zoom:1;*display:inline;}
