@@ -2,14 +2,14 @@
     <div class="col-sm-8 col-sm-offset-2">
         <div id="form-container">
             <div class="page-header text-center">
-                <h2>Let's Be Friends</h2>
+                <h2>账户注册</h2>
                 <div id="status-buttons" class="text-center">
-                    <a ui-sref-active="active" ui-sref=".profile"><span>1</span> Profile</a>
-                    <a ui-sref-active="active" ui-sref=".interests"><span>2</span> Interests</a>
-                    <a ui-sref-active="active" ui-sref=".payment"><span>3</span> Payment</a>
+                    <a ui-sref-active="active" ui-sref=".profile"><span>1</span> 设置登录名</a>
+                    <a ui-sref-active="active" ui-sref=".interests"><span>2</span>填写账户信息</a>
+                    <a ui-sref-active="active" ui-sref=".payment"><span>3</span> 注册成功</a>
                 </div>
             </div>
-            <form id="signup-form" ng-submit="processForm()">
+            <form id="signup-form" ng-submit="processForm()" name="process_form" >
                 <div id="form-views" ui-view></div>
             </form>
         </div>

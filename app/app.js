@@ -40,6 +40,7 @@ var app = angular.module('formApp', modules).
         $urlRouterProvider.otherwise('/form/profile');
     }]).controller('formController', ['$scope',function($scope) {
         $scope.formData = {};
+        $scope.emailFocus = false;
         $scope.processForm = function() {
             alert('awesome!');
         };

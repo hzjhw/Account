@@ -1,28 +1,32 @@
 /* BASIC STYLINGS
 ============================================================================= */
 body                            { padding-top:20px; }
+.container{background: url(../images/logo.gif) no-repeat  39px 40px;}
+
 /* form styling */
-#form-container                { background:#2f2f2f; margin-bottom:20px;
+#form-container                {  margin-bottom:20px;
     border-radius:5px; }
-#form-container .page-header   { background:#151515; margin:0; padding:30px;
+#form-container .page-header   {  margin:0; padding-top: 30px;padding-bottom: 0px; *border-bottom: 2px solid #e6e6e6;border-bottom: 2px solid #e6e6e6;height: 183px;
     border-top-left-radius:5px; border-top-right-radius:5px; }
+#form-container .page-header h2{font-family: "\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;font-size: 22px;}
 /* numbered buttons */
-#status-buttons                 {  }
-#status-buttons a               { color:#FFF; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase; }
+#status-buttons                 { padding-top: 30px; }
+#status-buttons a               { color:#999; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase;width: 200px;padding-bottom: 10px;}
 #status-buttons a:hover         { text-decoration:none; }
 /* we will style the span as the circled number */
-#status-buttons span            { background:#080808; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px;
-    border-radius:50%; }
+#status-buttons span            { background:#999;  color:#fff;display:block; height:30px; margin:0 auto 10px; padding-top:6px; width:30px;
+    border-radius:50%; font-family: "\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;}
 /* active buttons turn light green-blue*/
-#status-buttons a.active span   { background:#00BC8C; }
+#status-buttons a.active span   { background:#ff4700; color:#fff;}
+#status-buttons a.active {color: #3e3e3e; border-bottom: 2px solid #ff4700;}
 /* ANIMATION STYLINGS
 ============================================================================= */
-#signup-form            { position:relative; min-height:300px; overflow:hidden; padding:30px; }
+#signup-form            { position:relative; min-height:300px; overflow:hidden; padding:30px;padding-left:262px; }
 #form-views             { width:auto; }
 /* basic styling for entering and leaving */
 /* left and right added to ensure full width */
 #form-views.ng-enter,
-#form-views.ng-leave      { position:absolute; left:30px; right:30px;
+#form-views.ng-leave      { position:absolute; left:262px; right:30px;
     transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease;
 }
 /* enter animation */
@@ -62,3 +66,17 @@ body                            { padding-top:20px; }
     from 	{ -webkit-transform:translateX(200%); }
     to 		{ -webkit-transform: translateX(0); }
 }
+
+
+/*input*/
+body, button, input, select, textarea {
+font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+.form-control{width: 44%;}
+.col-xs-6 {width: 39%;}
+.btn-info {background-color: #ff4001;border: none;padding: 8px 12px;font-size: 16px;}
+.btn-info:hover{background-color: #f73500;border: none;}
+#form-views label{font-weight: normal;}
+#form-views input{display: inline-block;}
+#form-views .form-label{display: inline;float: left;margin-left: -260px;width: 240px;height: 37px;line-height: 37px;text-align: right;}
+.iconfont{display: inline;float: left;margin-left: -18px;margin-top: -1px;color: #00bfff;font-size: 16px;line-height: 18px;font-style: italic;}
