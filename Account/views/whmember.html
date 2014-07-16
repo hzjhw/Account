@@ -1,0 +1,103 @@
+<div ng-repeat="alert in alerts" class="msgtip"   close="closeAlert($index)" ng-show="$last"><p class="inner {{alert.type}}">{{alert.msg}}</p></div>
+<div ng-controller="WhMemberCtrl"
+     class="">
+    <form role="form" ng-submit="submitWhMember()" class="form-horizontal ng-pristine ng-valid">
+<input type="hidden" ng-model="whmember.member_id">
+        <table>
+            <tbody>
+            <tr>
+                <td>姓名</td>
+                <td><input type="text" ng-model="whmember.name" class="ng-pristine ng-valid"></td>
+                <td>所在城市</td>
+                <td><input type="text" ng-model="whmember.city" class="ng-pristine ng-valid"></td>
+                <td>顾问次数</td>
+                <td><input type="text" ng-model="whmember.adviser_count" class="ng-pristine ng-valid ng-valid-number"></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td>期数</td>
+                <td><input type="text" ng-model="whmember.per" class="ng-pristine ng-valid"></td>
+                <td>联系方式</td>
+                <td><input type="text" ng-model="whmember.phone" class="ng-pristine ng-valid"></td>
+                <td>微信号</td>
+                <td><input type="text" ng-model="whmember.weixin" class="ng-pristine ng-valid ng-valid-number"></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td>系统内担任职务</td>
+                <td colspan="3"><textarea style="width: 439px; height: 41px;" class="ng-pristine ng-valid" ng-model="whmember.job"></textarea></td>
+                <td>系统内家族人员</td>
+                <td><input type="text" ng-model="whmember.family" class="ng-pristine ng-valid"></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td>公司名称</td>
+                <td colspan="5"><textarea ng-model="whmember.entname" class="ng-pristine ng-valid" style="width: 723px; height: 56px;"></textarea></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td>公司地址</td>
+                <td colspan="5"><textarea ng-model="whmember.address" class="ng-pristine ng-valid" style="width: 723px; height: 56px;"></textarea></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td>经营范围</td>
+                <td colspan="5"><textarea ng-model="whmember.scope_of_business" class="ng-pristine ng-valid" style="width: 723px; height:56px;"></textarea></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td colspan="6">您最深刻的兵法知识点：</td>
+            </tr>
+            <tr>
+                <td colspan="6"><textarea ng-model="whmember.l_know" rows="2" class="ng-pristine ng-valid" style="width: 819px; height: 50px;"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="6">您最疑惑的兵法知识点：</td>
+            </tr>
+            <tr>
+                <td colspan="6"><textarea ng-model="whmember.s_know" rows="2" class="ng-pristine ng-valid" style="width: 819px; height: 50px;"></textarea></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td colspan="6">您最希望在顾问会分享的兵法话题：</td>
+            </tr>
+            <tr>
+                <td colspan="6"><textarea ng-model="whmember.share_know" rows="2" class="ng-pristine ng-valid" style="width: 819px; height: 50px;"></textarea></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td colspan="6">您本年度的B点：</td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td colspan="6"><textarea ng-model="whmember.b_point" rows="2" class="ng-pristine ng-valid" style="width: 819px; height: 50px;"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="6">您需要哪些资源（可着重填写帮助您达成2014年B点的资源）：</td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td colspan="6"><textarea ng-model="whmember.resources_in" rows="2" class="ng-pristine ng-valid" style="width: 819px; height: 50px;"></textarea></td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td colspan="6">您可贡献的资源：</td>
+            </tr>
+            <tr><td><div class="space-4"></div></td></tr>
+            <tr>
+                <td colspan="6"><textarea ng-model="whmember.resources_out" rows="2" class="ng-pristine ng-valid" style="width: 819px; height: 50px;"></textarea></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="clearfix form-actions">
+            <div class=" col-md-9">
+                <button type="submit" class="btn btn-info">
+                    <i class="icon-ok bigger-110"></i>
+                    保存
+                </button>
+
+            </div>
+        </div>
+    </form>
+</div>
