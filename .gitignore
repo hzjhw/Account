@@ -4,7 +4,6 @@ npm-debug.log
 .settings
 node_modules/
 bower_components/
-doc/
 *.iml
 *.swp
 /.tmp/
