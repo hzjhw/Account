@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>账户注册 | 淘宝网</title>
+    <title>账户注册 | 机汇网</title>
     <!--吊顶assets START-->
     <link rel="stylesheet" href="http://g.tbcdn.cn/??tb/global/2.6.13/global-min.css?t=20140305">
     <!--吊顶assets END-->
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/register/20140714.css">
     <script type="" src="scripts/register/register.js"></script>
     <script type="" src="scripts/register/jquery.min.js"></script>
-
+    <script type="" src="scripts/register/email-reg.js" charset="utf-8"></script>
 </head>
 <body data-spm="7275745"><script type="text/javascript">
     (function (d) {
@@ -26,20 +26,132 @@
     })(document);
 </script>
 
-<!-- S GLOBAL HTML -->
-<div id="J_SiteNav" class="site-nav">
-    <div id="J_SiteNavBd" class="site-nav-bd">
-        <ul id="J_SiteNavBdL" class="site-nav-bd-l"></ul>
-        <ul id="J_SiteNavBdR" class="site-nav-bd-r"></ul>
-    </div>
-</div>
-<!-- -->
 <!-- 全网顶通 -->
 <!-- E GLOBAL HTML   -->
+<script type="text/javascript">
+$(function(){
+    $('#J_Email').mouseover(function(){
+        var email=$('#J_Email').val();
+        if( email == ''){ $('.msg-cnt').eq(3).html("Ҫ4-19���ַ�a");
+            $(".msg-weak i").eq(3).css("background-position"," 0 -160px");
+        }
+    });
+    $('#J_Email').mouseout(function(){
+        var email=$('#J_Email').val();
+        var re = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+        if(!re.test(email)){
+            $('.msg-cnt').eq(3).html("����");
+            $(".msg-weak i").eq(3).css("background-position"," 0 0");
+        }else{
+            $('.msg-cnt').eq(3).html("һ��ע��ɹ������޸�");
+            $(".msg-weak i").eq(3).css("background-position"," 0 -200px");
+        }
+    });
 
 
 
+})
 
+
+
+</script>
+
+
+<script type="text/javascript">
+    window.onload=function(){
+
+
+        $('#J_Nick').mouseover(function(){
+            var usern=$('#J_Nick').val();
+            if( usern == ''){ $('.msg-cnt').eq(0).html("Ҫ4-19���ַ�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 -160px");
+            }
+        });
+        $('#J_Pwd').mouseover(function(){
+            var usern=$('#J_Pwd').val();
+            if( usern == ''){ $('.msg-cnt').eq(1).html("Ҫ6-19���ַ�a");
+                $(".msg-weak i").eq(1).css("background-position"," 0 -160px");
+            }
+        });
+        $('#J_Email').mouseover(function(){
+            var email=$('#J_Email').val();
+            if( email == ''){ $('.msg-cnt').eq(3).html("Ҫ4-19���ַ�a");
+                $(".msg-weak i").eq(3).css("background-position"," 0 -160px");
+            }
+        });
+
+        $('#J_Nick').mouseout(function(){
+            var username=$('#J_Nick').val();
+            var reg=/^[a-zA-Z0-9_]{4,19}$/;
+            if(!reg.test(username)){
+                $('.msg-cnt').eq(0).html("4-19���ַ�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(0).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 -200px");
+            }
+
+        });
+        $('#J_Pwd').mouseout(function(){
+            var password=$('#J_Pwd').val();
+            var reg=/^[a-zA-Z0-9_]{6,19}$/;
+            if(!reg.test(password)){
+                $('.msg-cnt').eq(1).html("6-19���ַ�");
+                $(".msg-weak i").eq(1).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(1).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(1).css("background-position"," 0 -200px");
+                $('#J_RePwd').css("background","#fff");
+                $('#J_RePwd').attr("disabled",false);
+                // $('#J_RePwd').removeAttr("disabled");
+            }
+
+
+        });
+
+        $('#J_Email').mouseout(function(){
+            var email=$('#J_Email').val();
+            var re = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(!re.test(email)){
+                $('.msg-cnt').eq(3).html("����");
+                $(".msg-weak i").eq(3).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(3).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(3).css("background-position"," 0 -200px");
+            }
+        });
+        $('#J_RePwd').mouseout(function(){
+            var RePwd=$('#J_RePwd');var password=$('#J_Pwd').val();
+            if(RePwd === password){alert("���벻һ��"); return false;}
+        });
+        $('#J_RePwd').mouseover(function(){
+            var RePwd=$('#J_RePwd').val();
+            if( RePwd == ''){ $('.msg-cnt').eq(2).html("����һ������");
+                $(".msg-weak i").eq(2).css("background-position"," 0 -160px");
+            }
+        });
+
+        $('#J_BtnBasicInfoForm').click(function(){
+            var username=$('#J_Nick').val();
+            var password=$('#J_Pwd').val();
+            var email=$('#J_Email').val();
+
+            var reg=/^[a-zA-Z0-9_]{4,19}$/;
+            var rega=/^[a-zA-Z0-9_]{6,19}$/;
+            var ree = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(username ==''){alert("��Ա��Ϊ�գ�");return false;}
+            if(!reg.test(username)){alert("��Ա�����"); return false;}
+            if(!rega.test(password) ){alert("�������"); return false;}
+            if(email ==''){alert("emailΪ�գ�");  return false;}
+            if(!ree.test(email)){alert("email����"); return false;}
+            document.cookie=username+'='+encodeURIComponent(password);
+            alert("ע��ɹ���")
+            window.location.href="login.html";
+        });
+
+
+    }
+</script>
 <div class="page lang-zh-S">
 
 
@@ -47,7 +159,7 @@
 
     <div class="header">
         <div class="logo">
-            <h1><a href="http://www.taobao.com"><i class="iconfont tb-logo-cn">&#x35b8;</i><i class="iconfont tb-logo-url">&#x35b7;</i></a></h1>
+            <h1><a href="http://www.taobao.com"><i class="iconfont tb-logo-cn"></i><i class="iconfont tb-logo-url"></i></a></h1>
             <h2 class="tsl" data-phase-id="r_p_registration">账户注册</h2>
         </div>
     </div>
@@ -57,14 +169,14 @@
         <ol>
             <li  class="active" ><i>1</i><span class="tsl" data-phase-id="r_p_createAccount">设置登录名</span></li>
             <li ><i>2</i><span class="tsl" data-phase-id="r_p_fillUserInfo">填写账户信息</span></li>
-            <li ><i class="iconfont">&#x3447;</i><span class="tsl" data-phase-id="r_p_regSuc">注册成功</span></li>
+            <li ><i class="iconfont">&#xf00b2;</i><span class="tsl" data-phase-id="r_p_regSuc">注册成功</span></li>
         </ol>
 
 
         <div class="tsl-switcher">
             <a href="http://reg.taobao.com/member/new_register.jhtml"  class="current" >中文</a>
             |
-            <a href="http://reg.taobao.com/member/new_register.jhtml?_lang=en&amp;_regfrom=TB_OVERSEA"  >English</a>
+            <a href="http://reg.taobao.com/member/new_register.jhtml"  >English</a>
         </div>
 
     </div>
@@ -182,85 +294,8 @@
 <!--手机验证END-->
 
 
-<!-- UE -->
-<div class="ue-suggest">
-    <img width="18" height="18" alt="注册改进建议" src="http://img04.taobaocdn.com/tps/i4/T1Pt0FXmJcXXXXXXXX-18-18.png">
-    <a target="_blank" href="http://ur.taobao.com/survey/view.htm?id=587">"淘宝注册"改进建议</a>
-</div>
 
 
-<!-- 页脚 -->
-<div class="footer">
-    <div class="footer-hd">
-        <p>
-            <a href="//page.1688.com/shtml/about/ali_group1.shtml">阿里巴巴集团</a>
-            <b>|</b>
-            <a href="//www.alibaba.com">阿里巴巴国际站</a>
-            <b>|</b>
-            <a href="//www.1688.com">阿里巴巴中国站</a>
-            <b>|</b>
-            <a href="//www.aliexpress.com">全球速卖通</a>
-            <b>|</b>
-            <a href="//www.taobao.com">淘宝网</a>
-            <b>|</b>
-            <a href="//www.tmall.com">天猫</a>
-            <b>|</b>
-            <a href="//ju.taobao.com">聚划算</a>
-            <b>|</b>
-            <a href="//www.etao.com">一淘</a>
-            <b>|</b>
-            <a href="//www.alimama.com">阿里妈妈</a>
-            <b>|</b>
-            <a href="//www.aliyun.com">阿里云计算</a>
-            <b>|</b>
-            <a href="//www.yunos.com">云OS</a>
-            <b>|</b>
-            <a href="//www.net.cn">万网</a>
-            <b>|</b>
-            <a href="//www.alipay.com">支付宝</a>
-        </p>
-    </div>
-    <div class="footer-bd">
-        <p>
-            <a href="//www.taobao.com/about">关于淘宝</a>
-            <a href="//www.taobao.com/about/partners.php">合作伙伴</a>
-            <a href="//pro.taobao.com">营销中心</a>
-            <a href="//service.taobao.com/support/main/service_route.htm">联系客服</a>
-            <a href="//open.taobao.com">开放平台</a>
-            <a href="//www.taobao.com/about/join.php">诚征英才</a>
-            <a href="//www.taobao.com/about/contact.php">联系我们</a>
-            <a href="//www.taobao.com/sitemap.php">网站地图</a>
-            <a href="//www.taobao.com/about/copyright.php">法律声明</a>
-            <em>&copy; 2014 Taobao.com 版权所有</em>
-        </p>
-        <p>
-            <span>网络文化经营许可证：<a href="//img04.taobaocdn.com/tps/i4/T1ysdvXtNeXXcPpEkQ-972-636.jpg">文网文[2010]040号</a></span>
-            <b>|</b>
-            <span>增值电信业务经营许可证：浙B2-20080224-1</span>
-            <b>|</b>
-            <span>信息网络传播视听节目许可证：1109364号</span>
-        </p>
-    </div>
-    <div class="footer-ft">
-        <a href="//www.pingpinganan.gov.cn/web/index.aspx?file=index.aspx"><img width="36" height="36" src="//img01.taobaocdn.com/tps/i1/T1FeW3XXNfXXXXXXXX-36-36.gif"></a>
-        <a href="//idinfo.zjaic.gov.cn/bscx.do?method=hddoc&id=33018400000067" class="mod mod-a"></a>
-        <a href="//idinfo.zjaic.gov.cn/bscx.do?&method=hddoc&id=33018400000067" class="mod mod-b"></a>
-        <a href="//www.theclimategroup.org.cn/about/friend" class="mod mod-c"></a>
-        <a href="https://ss.cnnic.cn/verifyseal.dll?&sn=2010062300100001357&pa=20100701" class="mod mod-d"></a>
-        <a href="//www.ppaaol.com/verifySite.do?id=1051" class="mod mod-e"></a>
-    </div>
-    <div class="footer-toy"></div>
-
-    <div id="server-num" style="color:#FFF;font-size:11px;text-align:center">register010096236113.cm3</div>
-</div><!-- 页脚 -->
-
-<!-- S GLOBAL JS -->
-<script src="http://g.tbcdn.cn/??kissy/k/1.4.2/seed-min.js,tb/global/2.9.7/global-min.js"></script>
-<!-- E GLOBAL JS -->
-<script type="text/javascript">
-    TB.Global.blacklist = ['fn-cart'];
-    TB.Global.init();
-</script>
 
 <script type="text/javascript">
 
@@ -326,21 +361,7 @@
 
 
 
-<script >
-    TRConfig = {
-        "checkEmailUrl" : "http://reg.taobao.com/member/check_email.do?type=NormalRegistrationV2",
-        "resendCellUrl" : "http://reg.taobao.com/member/checkcode/send_cell_checkcode.do?resend=true&type=NormalRegistrationV2",
-        "sendCellUrl" : "http://reg.taobao.com/member/checkcode/send_cell_checkcode.do?imgChked=true&type=NormalRegistrationV2",
-        "checkCellUrl" : "http://reg.taobao.com/member/checkcode/check_cell_checkcode.do?type=NormalRegistrationV2",
-        "sendEmailUrl" : "http://reg.taobao.com/member/checkcode/send_email_check_code.do?type=NormalRegistrationV2",
-        "emailSentUrl" : "http://reg.taobao.com/member/reg/email_sent.htm",
-        "showMobileCheck" : true
-    };
-</script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/tsl.js" charset="utf-8"></script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/??reg.js,atp.js,q.js" charset="utf-8"></script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/components/??xerror.js,timeoutbtn.js,checkcode.js,message.js,emailsuggest.js,mobile.js,email.js" charset="utf-8"></script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/utils/??messages.js,checkenable.js" charset="utf-8"></script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/email-reg.js" charset="utf-8"></script>
+
+
 
 </body>
