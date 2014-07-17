@@ -17,7 +17,7 @@ body                            { padding-top:20px; }
 /* form styling */
 #form-container                {  margin-bottom:20px;
     border-radius:5px; }
-#form-container .page-header   {  margin:0; padding-top: 30px;padding-bottom: 0px; *border-bottom: 2px solid #e6e6e6;border-bottom: 2px solid #e6e6e6;height: 209px;
+#form-container .page-header   {  margin:0; padding-top: 30px;padding-bottom: 0px; *border-bottom: 2px solid #e6e6e6;border-bottom: 2px solid #e6e6e6;height: 208px;
     border-top-left-radius:5px; border-top-right-radius:5px; }
 #form-container .page-header h2{font-family: "\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;font-size: 22px;background: url(../images/logo.gif) no-repeat 0 0;
     padding: 12px 0;
@@ -94,3 +94,13 @@ font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
 #form-views input{display: inline-block;}
 #form-views .form-label{display: inline;float: left;margin-left: -260px;width: 240px;height: 37px;line-height: 37px;text-align: right;}
 .help-block{display: inline;}
+#form-views h3{font-family: "\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;font-size: 18px;}
+#form-views h3 i{background-image: url(../images/ico-circle1.png);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+    font-style: normal;
+    line-height: 27px;
+    color: #FFF;
+    font-size: 15px;}

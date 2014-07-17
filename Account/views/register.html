@@ -96,7 +96,7 @@
                 <label for="phone" class="col-lg-2 control-label">联系电话</label>
                 <div class="col-lg-8">
                     <input ng-model="user.phone"  name="phone" format="phone" ng-required="requireTel"
-                           ng-pattern="phoneNumberPattern"  class="form-control"  id="phone"  placeholder="0571-12345678">
+                           ng-pattern="phoneNumberPattern"  class="form-control"  id="phone"  placeholder="0571-12345678" ng-pattern="phoneNumberPattern" required>
                 </div>
                 <div class="col-lg-2">
                     <p class="help-block" ng-show="form.phone.$valid "><i class="icon-ok"></i></p>

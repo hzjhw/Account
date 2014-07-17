@@ -1,23 +1,42 @@
-<div class="form-group">
-    <label for="code" class="form-label">登录账号</label>
-    <input id="code" type="text" class="form-control" name="code" ng-model="formData.code">
+<div class="form-group" ng-class="{'has-success': process_form.username.$valid, 'has-error': process_form.username.$dirty && process_form.username.$invalid}">
+    <label for="username" class="form-label">登录账号</label>
+    <input id="username" type="text" ng-focus="usernameFocus = true" class="form-control" name="username" ng-model="formData.username"  ng-pattern="/^[a-zA-Z0-9]{4,32}$/" placeholder="用户名" required>
+    <span class="help-block error" ng-show="usernameFocus && process_form.username.$error.required" ><i class="iconfont">&#xf00b4;</i>请输入你的账号</span>
+    <span class="help-block error" ng-show="process_form.username.$dirty && process_form.username.$invalid && !process_form.username.$error.required"><i class="iconfont">&#xf00b3;</i>账号格式不正确，请重新输入</span>
+    <span class="help-block error" ng-show="process_form.username.$valid"><i class="iconfont">&#xf00b2;</i></span>
 </div>
-<label >设置登录密码  登录时验证，保护账户信息</label>
-<div class="form-group">
-    <label for="code" class="form-label">登录密码</label>
-    <input id="code" type="text" class="form-control" name="code" ng-model="formData.code">
+<label ><b>设置登录密码</b>    登录时验证，保护账户信息</label>
+<div class="form-group" ng-class="{'has-success': process_form.password.$valid, 'has-error': process_form.password.$dirty && process_form.password.$invalid}">
+    <label for="password" class="form-label">登录密码</label>
+    <input id="password" type="password" tooltip="密码长度为4-32位" ng-focus="passwordFocus = true" class="form-control" name="password" ng-model="formData.password"   ng-minlength="4" ng-maxlength="32" placeholder="密码" required>
+    <span class="help-block error" ng-show="passwordFocus && process_form.password.$error.required" ><i class="iconfont">&#xf00b4;</i>请输入你的密码</span>
+    <span class="help-block error" ng-show="process_form.password.$dirty && process_form.password.$invalid && !process_form.password.$error.required"><i class="iconfont">&#xf00b3;</i>密码格式不正确，请重新输入</span>
+    <span class="help-block error" ng-show="process_form.password.$valid"><i class="iconfont">&#xf00b2;</i></span>
+
 </div>
-<div class="form-group">
-    <label for="code" class="form-label">再次确认</label>
-    <input id="code" type="text" class="form-control" name="code" ng-model="formData.code">
+<div class="form-group" ng-class="{'has-success': formData.repassword == formData.password && process_form.repassword.$valid, 'has-error': (formData.repassword != formData.password) || process_form.repassword.$invalid && !process_form.repassword.$error.required }">
+    <label for="repassword" class="form-label">再次输入</label>
+    <input id="repassword" type="password" ng-focus="repasswordFocus = true" class="form-control" name="repassword" ng-model="formData.repassword"   ng-minlength="4" ng-maxlength="32" placeholder="再次输入密码" required>
+    <span class="help-block error" ng-show="repasswordFocus && process_form.repassword.$error.required" ><i class="iconfont">&#xf00b4;</i>请再次输入你的密码</span>
+    <span class="help-block error" ng-show="process_form.repassword.$dirty && process_form.repassword.$invalid && !process_form.repassword.$error.required"><i class="iconfont">&#xf00b3;</i>密码格式不正确，请重新输入</span>
+    <span class="help-block error" ng-show="repasswordFocus && formData.repassword != formData.password && process_form.repassword.$valid"><i class="iconfont">&#xf00b3;</i>密码不一样，请重新输入</span>
+    <span class="help-block error" ng-show="formData.repassword == formData.password && process_form.repassword.$valid"><i class="iconfont">&#xf00b2;</i></span>
 </div>
-<div class="form-group">
-    <label for="code" class="form-label">会员名</label>
-    <input id="code" type="text" class="form-control" name="code" ng-model="formData.code">
+
+<div class="form-group" ng-class="{'has-success': process_form.name.$valid, 'has-error': process_form.name.$dirty && process_form.name.$invalid}">
+    <label for="name" class="form-label">会员名</label>
+    <input id="name" type="text" ng-focus="nameFocus = true" class="form-control" name="name" ng-model="formData.name"  ng-minlength="2" ng-maxlength="32" placeholder="会员名" required>
+    <span class="help-block error" ng-show="nameFocus && process_form.name.$error.required" ><i class="iconfont">&#xf00b4;</i>请输入你的会员名</span>
+    <span class="help-block error" ng-show="process_form.name.$dirty && process_form.name.$invalid && !process_form.name.$error.required"><i class="iconfont">&#xf00b3;</i>会员名格式不正确，请重新输入</span>
+    <span class="help-block error" ng-show="process_form.name.$valid"><i class="iconfont">&#xf00b2;</i></span>
+
 </div>
+
+
+
 <div class="form-group row">
     <div class="col-xs-6 col-xs-offset-3">
-        <a ui-sref="form.payment" class="btn btn-block btn-info">
+        <a ui-sref="form.payment" class="btn btn-block btn-info" ng-disabled="process_form.$invalid">
             确定 <span class="glyphicon glyphicon-circle-arrow-right"></span>
         </a>
     </div>

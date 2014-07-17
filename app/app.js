@@ -44,6 +44,7 @@ var app = angular.module('formApp', modules).
         $scope.processForm = function() {
             alert('awesome!');
         };
+
     }]);
 angular.module('ie7support', []).config(['$sceProvider', function($sceProvider) {
     // Completely disable SCE to support IE7.
