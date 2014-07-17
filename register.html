@@ -57,7 +57,101 @@ $(function(){
 </script>
 
 
+<script type="text/javascript">
+    window.onload=function(){
 
+
+        $('#J_Nick').mouseover(function(){
+            var usern=$('#J_Nick').val();
+            if( usern == ''){ $('.msg-cnt').eq(0).html("Ҫ4-19���ַ�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 -160px");
+            }
+        });
+        $('#J_Pwd').mouseover(function(){
+            var usern=$('#J_Pwd').val();
+            if( usern == ''){ $('.msg-cnt').eq(1).html("Ҫ6-19���ַ�a");
+                $(".msg-weak i").eq(1).css("background-position"," 0 -160px");
+            }
+        });
+        $('#J_Email').mouseover(function(){
+            var email=$('#J_Email').val();
+            if( email == ''){ $('.msg-cnt').eq(3).html("Ҫ4-19���ַ�a");
+                $(".msg-weak i").eq(3).css("background-position"," 0 -160px");
+            }
+        });
+
+        $('#J_Nick').mouseout(function(){
+            var username=$('#J_Nick').val();
+            var reg=/^[a-zA-Z0-9_]{4,19}$/;
+            if(!reg.test(username)){
+                $('.msg-cnt').eq(0).html("4-19���ַ�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(0).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(0).css("background-position"," 0 -200px");
+            }
+
+        });
+        $('#J_Pwd').mouseout(function(){
+            var password=$('#J_Pwd').val();
+            var reg=/^[a-zA-Z0-9_]{6,19}$/;
+            if(!reg.test(password)){
+                $('.msg-cnt').eq(1).html("6-19���ַ�");
+                $(".msg-weak i").eq(1).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(1).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(1).css("background-position"," 0 -200px");
+                $('#J_RePwd').css("background","#fff");
+                $('#J_RePwd').attr("disabled",false);
+                // $('#J_RePwd').removeAttr("disabled");
+            }
+
+
+        });
+
+        $('#J_Email').mouseout(function(){
+            var email=$('#J_Email').val();
+            var re = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(!re.test(email)){
+                $('.msg-cnt').eq(3).html("����");
+                $(".msg-weak i").eq(3).css("background-position"," 0 0");
+            }else{
+                $('.msg-cnt').eq(3).html("һ��ע��ɹ������޸�");
+                $(".msg-weak i").eq(3).css("background-position"," 0 -200px");
+            }
+        });
+        $('#J_RePwd').mouseout(function(){
+            var RePwd=$('#J_RePwd');var password=$('#J_Pwd').val();
+            if(RePwd === password){alert("���벻һ��"); return false;}
+        });
+        $('#J_RePwd').mouseover(function(){
+            var RePwd=$('#J_RePwd').val();
+            if( RePwd == ''){ $('.msg-cnt').eq(2).html("����һ������");
+                $(".msg-weak i").eq(2).css("background-position"," 0 -160px");
+            }
+        });
+
+        $('#J_BtnBasicInfoForm').click(function(){
+            var username=$('#J_Nick').val();
+            var password=$('#J_Pwd').val();
+            var email=$('#J_Email').val();
+
+            var reg=/^[a-zA-Z0-9_]{4,19}$/;
+            var rega=/^[a-zA-Z0-9_]{6,19}$/;
+            var ree = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(username ==''){alert("��Ա��Ϊ�գ�");return false;}
+            if(!reg.test(username)){alert("��Ա�����"); return false;}
+            if(!rega.test(password) ){alert("�������"); return false;}
+            if(email ==''){alert("emailΪ�գ�");  return false;}
+            if(!ree.test(email)){alert("email����"); return false;}
+            document.cookie=username+'='+encodeURIComponent(password);
+            alert("ע��ɹ���")
+            window.location.href="login.html";
+        });
+
+
+    }
+</script>
 <div class="page lang-zh-S">
 
 
@@ -203,14 +297,6 @@ $(function(){
 
 
 
-<!-- S GLOBAL JS -->
-<script src="http://g.tbcdn.cn/??kissy/k/1.4.2/seed-min.js,tb/global/2.9.7/global-min.js"></script>
-<!-- E GLOBAL JS -->
-<script type="text/javascript">
-    TB.Global.blacklist = ['fn-cart'];
-    TB.Global.init();
-</script>
-
 <script type="text/javascript">
 
     TRLang={
@@ -275,21 +361,7 @@ $(function(){
 
 
 
-<script >
-    TRConfig = {
-        "checkEmailUrl" : "http://reg.taobao.com/member/check_email.do?type=NormalRegistrationV2",
-        "resendCellUrl" : "http://reg.taobao.com/member/checkcode/send_cell_checkcode.do?resend=true&type=NormalRegistrationV2",
-        "sendCellUrl" : "http://reg.taobao.com/member/checkcode/send_cell_checkcode.do?imgChked=true&type=NormalRegistrationV2",
-        "checkCellUrl" : "http://reg.taobao.com/member/checkcode/check_cell_checkcode.do?type=NormalRegistrationV2",
-        "sendEmailUrl" : "http://reg.taobao.com/member/checkcode/send_email_check_code.do?type=NormalRegistrationV2",
-        "emailSentUrl" : "http://reg.taobao.com/member/reg/email_sent.htm",
-        "showMobileCheck" : true
-    };
-</script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/tsl.js" charset="utf-8"></script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/??reg.js,atp.js,q.js" charset="utf-8"></script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/components/??xerror.js,timeoutbtn.js,checkcode.js,message.js,emailsuggest.js,mobile.js,email.js" charset="utf-8"></script>
-<script src="http://g.tbcdn.cn//tb/register/2.1.0/xcommon/js/utils/??messages.js,checkenable.js" charset="utf-8"></script>
+
 
 
 </body>
