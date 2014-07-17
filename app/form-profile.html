@@ -2,10 +2,9 @@
 <div class="form-group" ng-class="{'has-success': process_form.email.$valid, 'has-error': process_form.email.$dirty && process_form.email.$invalid}">
     <label for="email" class="form-label">电子邮箱</label>
     <input id="email" type="email" ng-focus="emailFocus = true" class="form-control" name="email" ng-model="formData.email" required>
-    <i class="iconfont"></i>
-    <span class="help-block error" ng-show="emailFocus && process_form.email.$error.required" >请输入你的电子邮箱</span>
-    <span class="help-block error" ng-show="process_form.email.$dirty && process_form.email.$invalid && !process_form.email.$error.required">邮箱格式不正确，请重新输入</span>
-    <span class="help-block error" ng-show="false">邮箱已被注册</span>
+    <span class="help-block error" ng-show="emailFocus && process_form.email.$error.required" ><i class="iconfont">&#xf00b4;</i>请输入你的电子邮箱</span>
+    <span class="help-block error" ng-show="process_form.email.$dirty && process_form.email.$invalid && !process_form.email.$error.required"><i class="iconfont">&#xf00b4;</i>邮箱格式不正确，请重新输入</span>
+    <span class="help-block error" ng-show="process_form.email.$valid"><i class="iconfont">&#xf00b2;</i></span>
 
 </div>
 <div class="form-group">
