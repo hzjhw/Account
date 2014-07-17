@@ -1,12 +1,12 @@
 <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-lg-12 col-md-12 col-sm-12">
         <div id="form-container">
             <div class="page-header text-center">
                 <h2>账户注册</h2>
-                <div id="status-buttons" class="text-center">
-                    <a ui-sref-active="active" ui-sref=".profile"><span>1</span> 设置登录名</a>
-                    <a ui-sref-active="active" ui-sref=".interests"><span>2</span>填写账户信息</a>
-                    <a ui-sref-active="active" ui-sref=".payment"><span>3</span> 注册成功</a>
+                <div id="status-buttons" class="text-center col-lg-12 col-md-12 clear col-sm-12 clearfix">
+                    <a ui-sref-active="active" ui-sref=".profile" class="col-lg-4 col-md-4 col-sm-4"><span>1</span> 设置登录名</a>
+                    <a ui-sref-active="active" ui-sref=".interests" class="col-lg-4 col-md-4 col-sm-4"><span>2</span>填写账户信息</a>
+                    <a ui-sref-active="active" ui-sref=".payment" class="col-lg-4 col-md-4 col-sm-4"><span>3</span> 注册成功</a>
                 </div>
             </div>
             <form id="signup-form" ng-submit="processForm()" name="process_form" >
