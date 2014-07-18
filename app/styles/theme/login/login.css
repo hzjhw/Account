@@ -5,7 +5,7 @@ font-size:12px;
 width: 1000px;
 margin:0 auto;
 height: 700px;
-background:url(/Account/images/logo.gif) no-repeat left 30px;
+background:url(../../../../app/images/logo.gif) no-repeat left 30px;
 position:relative;
 }
 img.cooperation {
@@ -21,7 +21,7 @@ top:100px;
     width:285px;
     padding-left:30px;
     padding-bottom:30px;
-    background:url(/Account/images/code.jpg) no-repeat right top;
+    background:url(../../../../app/images/code.jpg) no-repeat right top;
     position:absolute;
     left:65%;
     top:16%;
@@ -51,7 +51,7 @@ top:100px;
     padding-left:35px;
     width:220px;
     height:25px;
-    background:url(/Account/images/name.jpg) no-repeat left center;
+    background:url(../../../../app/images/name.jpg) no-repeat left center;
     border:1px solid #ccc;
 }
 #password {
@@ -59,7 +59,7 @@ top:100px;
     padding-left:35px;
     width:220px;
     height:25px;
-    background:url(/Account/images/password.jpg) no-repeat left center;
+    background:url(../../../../app/images/password.jpg) no-repeat left center;
     border:1px solid #ccc;
 }
 .submit {

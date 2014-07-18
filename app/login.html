@@ -1,15 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>登录页</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="ng-app:loginApp" id="ng-app" ng-app="loginApp">
+<head>
+    <script>
+        document.documentElement.className = document.documentElement.className.replace('no-javascript', 'javascript');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="fragment" content="!">
+    <meta name="description" content="Description"/>
+    <meta name="viewport" content="width=device-width"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="vendor/patch/patch.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="styles/theme/login/login.css">
-    <script type="" src="../scripts/vendor/jquery.min.js"></script>
-    <script type="" src="../scripts/login/login.js"></script>
 </head>
+<!--[if IE 7]><body class="ie7"><![endif]-->
+<!--[if IE 8]><body class="ie8"><![endif]-->
+<!--[if IE 9]><body class="ie9"><![endif]-->
+<!--[if IE 10]><body class="ie10"><![endif]-->
+<!--[if IE 11]><body class="ie11"><![endif]-->
+<!--[if !IE]>-->
 <body>
-<div class="inbg">
-    <img class="cooperation" src="/Account/images/cooperation.jpg" width="360">
+<!--<![endif]-->
+<div class="inbg" ng-controller="LoginCtrl">
+    <img class="cooperation" src="images/cooperation.jpg" width="360">
     <div class="dly">
     <div class="one">
         登录
@@ -24,12 +38,12 @@
         <button type="submit" class="submit">登　录</button>
     </div>
     <div class="five" align="right">
-        <a href="/Account/app/index.html#/form/profile">免费注册</a>
+        <a href="register.html#/form/profile">免费注册</a>
     </div>
     </div>
     <div id="footer">
         <div class="footer-nav">
-            <a style="margin-left: 0;" href="http://www.easthardware.com">首页</a>|<a href="http://www.ykzbrcw.com/company/company-show.php?id=6" target="_blank">诚征英才</a>|<a href="http://www.ykit.net/" target="_blank">联系我们</a>|<a href="#">欢迎合作</a>|<a href="http://www.easthardware.com/homePage_v3/info.html">商业资讯</a>|<a href="http://ykwlyx.easthardware.com/" target="_blank">网络营销学院</a>|<a href="http://www.easthardware.com/homePage_v3/company.html" target="_blank">公司黄页</a>|<a href="http://www.easthardware.com/homePage_v3/sitemap.html">网站地图</a>
+            <a style="margin-left: 0;" href="http://www.jihui88.com">首页</a>|<a href="http://www.ykzbrcw.com/company/company-show.php?id=6" target="_blank">诚征英才</a>|<a href="http://www.ykit.net/" target="_blank">联系我们</a>|<a href="#">欢迎合作</a>|<a href="http://www.easthardware.com/homePage_v3/info.html">商业资讯</a>|<a href="http://ykwlyx.easthardware.com/" target="_blank">网络营销学院</a>|<a href="http://www.easthardware.com/homePage_v3/company.html" target="_blank">公司黄页</a>|<a href="http://www.easthardware.com/homePage_v3/sitemap.html">网站地图</a>
         </div>
         <div class="links">
             友情连接：<a href="http://www.lezicj.com" title="不粘锅，不粘锅十大品牌，不粘锅厂家，不粘锅加盟，不粘锅批发" target="_blank">不粘锅</a><a href="http://zjbqa.com/" title="不锈钢水管" target="_blank">不锈钢水管</a><a href="http://www.yzgm.net/" title="强化门" target="_blank">强化门</a><a href="http://ykjldoors.com/" title="金利门业" target="_blank">金利门业</a>
@@ -40,6 +54,13 @@
     </div>
 
 </div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/utils/Est.min.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-resource/angular-resource.min.js"></script>
+<script src="vendor/angular-route/angular-route.min.js"></script>
 
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/loginCtrl.js"></script>
 </body>
 </html>

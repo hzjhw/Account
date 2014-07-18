@@ -1,8 +1,8 @@
-/**
- * @description login
- * @namespace login
- * @author yongjin on 2014/7/8
- */
+app.controller('LoginCtrl', ['$scope', function($scope){
+
+}]);
+
+
 function r() {
     var username=$("#username") ;
     var pass=$("#password");
