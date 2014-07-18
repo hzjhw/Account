@@ -8,23 +8,23 @@ app.config(['$stateProvider', '$urlRouterProvider',
     $stateProvider
         .state('form', {
             url: '/form',
-            templateUrl: 'views/register/form.html',
+            templateUrl: 'modules/register/views/form.html',
             controller: 'FormCtrl'
         })
         .state('form.profile', {
             url: '/profile',
             controller: 'ProFileCtrl',
-            templateUrl: 'views/register/form-profile.html'
+            templateUrl: 'modules/register/views/form-profile.html'
         })
         .state('form.interests', {
             url: '/interests',
             controller: 'InterestsCtrl',
-            templateUrl: 'views/register/form-interests.html'
+            templateUrl: 'modules/register/views/form-interests.html'
         })
         .state('form.payment', {
             url: '/payment',
             controller: 'PaymentCtrl',
-            templateUrl: 'views/register/form-payment.html'
+            templateUrl: 'modules/register/views/form-payment.html'
         });
     $urlRouterProvider.otherwise('/form/profile');
 }]);

@@ -11,7 +11,9 @@ var modules = [ 'ui.router', 'ngRoute', 'ngAnimate'];
 if (msie === 7 || msie === 6){
     modules = ['ui.router', 'ngRoute'];
 }
-var app = angular.module('formApp', modules).
+var app = angular.module('formApp', modules)
+    .constant('HOST', 'http://example.com:9004')
+    .constant('API_END_POINT', 'http://example.com:9004/api/').
     config(['$sceProvider', '$sceDelegateProvider', '$httpProvider', function ($sceProvider,$sceDelegateProvider,$httpProvider) {
         $sceProvider.enabled(false);
         $sceDelegateProvider.resourceUrlWhitelist(['self','http://localhost:63342/**']);
