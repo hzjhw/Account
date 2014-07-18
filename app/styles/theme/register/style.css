@@ -2,11 +2,11 @@
 ============================================================================= */
 body                            { padding-top:20px; }
 @font-face {font-family: 'iconfont';
-    src: url('styles/theme/font/iconfont.eot'); /* IE9*/
-    src: url('styles/theme/font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('styles/theme/font/iconfont.woff') format('woff'), /* chrome、firefox */
-    url('styles/theme/font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('styles/theme/font/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+    src: url('../font/iconfont.eot'); /* IE9*/
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
 }
 .iconfont{
     font-family:"iconfont" !important;
@@ -17,9 +17,9 @@ body                            { padding-top:20px; }
 /* form styling */
 #form-container                {  margin-bottom:20px;
     border-radius:5px; }
-#form-container .page-header   {  margin:0; padding-top: 30px;padding-bottom: 0px; *border-bottom: 2px solid #e6e6e6;border-bottom: 2px solid #e6e6e6;height: 208px;
+#form-container .page-header   {  margin:0; padding-top: 30px;padding-bottom: 0px; *border-bottom: 2px solid #e6e6e6;border-bottom: 2px solid #e6e6e6;
     border-top-left-radius:5px; border-top-right-radius:5px; }
-#form-container .page-header h2{font-family: "\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;font-size: 22px;background: url(../images/logo.gif) no-repeat 0 0;
+#form-container .page-header h2{font-family: "\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;font-size: 22px;background: url(../../../../images/logo.gif) no-repeat 0 0;
     padding: 12px 0;
     text-align: left;
     padding-left: 408px;}
@@ -35,7 +35,7 @@ body                            { padding-top:20px; }
 #status-buttons a.active {color: #3e3e3e; border-bottom: 2px solid #ff4700;}
 /* ANIMATION STYLINGS
 ============================================================================= */
-#signup-form            { position:relative; min-height:300px; overflow:hidden; padding:30px;padding-left:400px; }
+#signup-form            { position:relative; min-height:300px;  padding:30px;padding-left:400px; }
 #form-views             { width:auto; }
 /* basic styling for entering and leaving */
 /* left and right added to ensure full width */
@@ -95,7 +95,7 @@ font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
 #form-views .form-label{display: inline;float: left;margin-left: -260px;width: 240px;height: 37px;line-height: 37px;text-align: right;}
 .help-block{display: inline;}
 #form-views h3{font-family: "\5FAE\8F6F\96C5\9ED1","\534E\6587\7EC6\9ED1","\9ED1\4F53",arial;font-size: 18px;}
-#form-views h3 i{background-image: url(../images/ico-circle1.png);
+#form-views h3 i{background-image: url(../../../../images/ico-circle1.png);
     width: 24px;
     height: 24px;
     display: inline-block;

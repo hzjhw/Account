@@ -4,12 +4,13 @@
     <input id="email" type="email" ng-focus="emailFocus = true" class="form-control" name="email" ng-model="formData.email" required>
     <span class="help-block error" ng-show="emailFocus && process_form.email.$error.required" ><i class="iconfont">&#xf00b4;</i>请输入你的电子邮箱</span>
     <span class="help-block error" ng-show="process_form.email.$dirty && process_form.email.$invalid && !process_form.email.$error.required"><i class="iconfont">&#xf00b3;</i>邮箱格式不正确，请重新输入</span>
-    <span class="help-block error" ng-show="process_form.email.$valid"><i class="iconfont">&#xf00b2;</i> <a href="" target="_blank">点击进入邮箱获取验证码</a></span>
+    <span class="help-block error" ng-show="process_form.email.$valid"><i class="iconfont">&#xf00b2;</i> </span>
 
 </div>
 <div class="form-group">
     <label for="code" class="form-label">验证码</label>
-    <input id="code" type="text" class="form-control" name="code" ng-model="formData.code">
+    <input id="code" type="text" class="form-control" style="width:100px;" name="code" required ng-model="formData.code">
+    <a href="" target="_blank">获取验证码</a>
 </div>
 
 <div class="form-group row">
