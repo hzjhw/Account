@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html class="ng-app:loginApp" id="ng-app" ng-app="loginApp">
+<html class="ng-app:formApp" id="ng-app" ng-app="formApp">
 <head>
     <script>
         document.documentElement.className = document.documentElement.className.replace('no-javascript', 'javascript');
@@ -23,16 +23,17 @@
 <body>
 <!--<![endif]-->
 <div class="inbg" ng-controller="LoginCtrl">
+    <from name="loginForm" ng-submit="submit()">
     <img class="cooperation" src="images/cooperation.jpg" width="360">
     <div class="dly">
     <div class="one">
         登录
     </div>
     <div class="two">
-        <input id="username" type="text" name="username" value="手机号/会员名/邮箱" />
+        <input id="username" type="text" name="username" ng-model="user.username" value="手机号/会员名/邮箱"  required/>
     </div>
     <div class="three">
-        <input id="password" type="password" name="password" />
+        <input id="password" type="password" ng-model="user.password" name="password"  required/>
     </div>
     <div class="four">
         <button type="submit" class="submit">登　录</button>
@@ -52,7 +53,7 @@
             <span><a name="baidusnap0"></a><b style="color:black;">东方五金网</b>   版权所有：</span>2000-2012 | E-mail: dfwj@ykit.net | <span onclick="goToByHref('http://net.china.com.cn/index.htm')" class="pointer">互联网违法和不良信息举报</span> | <span onclick="goToByHref('http://www.miibeian.gov.cn/')" class="pointer">经营许可证编号：浙B2-20100285</span>
         </div>
     </div>
-
+    </from>
 </div>
 <script src="scripts/app.min.js"></script>
 <script src="modules/login/controllers/loginCtrl.js"></script>

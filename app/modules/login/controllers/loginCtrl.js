@@ -1,5 +1,13 @@
-app.controller('LoginCtrl', ['$scope', function($scope){
+app.controller('LoginCtrl', ['$scope', 'AccountFactory', function($scope, AccountFactory){
+    $scope.user = {};
+    $scope.submit = function(){
+        AccountFactory.login($scope.user).then(function(data){
+            alert('login success' + data.username);
+        }, function(){
+            alert('login failed');
+        });
 
+    }
 }]);
 
 
