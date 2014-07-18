@@ -2,96 +2,14 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>登录页</title>
+    <link rel="stylesheet" href="styles/login/login.css">
+    <script type="" src="scripts/vendor/jquery.min.js"></script>
+    <script type="" src="scripts/login/login.js"></script>
 </head>
 <body>
-<style>
-    .dly {
-        border-top:2px solid #ff4000;
-        border-left:2px solid #dcdcdc;
-        border-right:2px solid #dcdcdc;
-        border-bottom:2px solid #dcdcdc;
-        width:285px;
-        padding-left:30px;
-        padding-bottom:30px;
-        background:url(images/code.jpg) no-repeat right top;
-        margin:200px auto 0;
-    }
-    .dly .one {
-        padding-top:30px;
-        padding-bottom:40px;
-    }
-    .dly .two {
-        margin-bottom:20px;
-    }
-    .dly .three {
-        margin-bottom:42px;
-    }
-    .dly .four {
-        margin-bottom:22px;
-    }
-    .dly .five {
-        width:255px;
-    }
-    .dly .five a {
-        color: #6d6d6d;
-        text-decoration: none;
-    }
-    #username {
-        color:#969696;
-        padding-left:35px;
-        width:255px;
-        height:25px;
-        background:url(images/name.jpg) no-repeat left center;
-        border:1px solid #ccc;
-    }
-    #password {
-        color:#969696;
-        padding-left:35px;
-        width:255px;
-        height:25px;
-        background:url(images/password.jpg) no-repeat left center;
-        border:1px solid #ccc;
-    }
-    .submit {
-        width: 255px;
-        height: 38px;
-        border: 0;
-        display: inline-block;
-        overflow: hidden;
-        vertical-align: middle;
-        line-height: 36px;
-        font-size: 16px;
-        font-weight: 700;
-        color: #FFF;
-        background: #ff4700;
-        border-radius: 3px;
-        cursor: pointer;
-        zoom: 1;
-    }
-</style>
-<script>
-    function r() {
-        var username=$("#username");
-        var pass=$("#password");
-        if (username.value === "") {
-            alert("请输入用户名");
-            username.focus();
-            return;
-        }
-        if (pass.value=="") {
-            alert("请输入密码");
-            return;
-        }
-        return true;
-    }
-    $(function(){
-        $(".submit").bind('click', function(){
-            r();
-        })
-    })
-</script>
-<div class="dly">
+<div class="inbg">
+    <div class="dly">
     <div class="one">
         登录
     </div>
@@ -106,6 +24,7 @@
     </div>
     <div class="five" align="right">
         <a href="registe.html">免费注册</a>
+    </div>
     </div>
 </div>
 
