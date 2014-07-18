@@ -4,10 +4,10 @@
  * @author yongjin on 2014/7/8
  */
 function r() {
-    var username=$("#username");
+    var username=$("#username") ;
     var pass=$("#password");
     if (username.val() === "") {
-        alert("请输入用户名");
+        alert("请输入用户名!");
         username.focus();
         return;
     }
