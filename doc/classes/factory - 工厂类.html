@@ -213,11 +213,80 @@
             <h4>Example:</h4>
 
             <div class="example-content">
-                <pre class="code prettyprint"><code> login : AccountFactory.login(user, params).then(function(data){
+                <pre class="code prettyprint"><code> // 登录
+ login : AccountFactory.login(user, params).then(function(data){
              console.log(&#39;登录成功&#39;);
          }, function(){
              console.log(&#39;登录失败&#39;);
-         });</code></pre>
+         });
+ // 退出登录
+ logout : AccountFactory.logout().then(function(){
+      console.log(&#39;logout success&#39;);
+ }, function(){
+     console.log(&#39;logout failed&#39;);
+ });
+ // 获取用户信息
+ getUser : AccountFactory.getUser().then(function(data){
+      console.log(data);
+ }, function(){
+     console.log(&#39;login failed&#39;);
+ });
+ // 保存用户信息
+ saveUser : AccountFactory.saveUser(user).then(function(data){
+     console.log(&#39;save success&#39;)
+ }, function(){
+     console.log(&#39;save failed&#39;);
+ })
+ // 获取公司信息
+ getEnterprise: AccountFactory.getEnterprise().then(function(data){
+     console.log(data);
+ }, function(){
+     console.log(&#39;get failed&#39;);
+ });
+ // 保存公司信息
+ saveEnterprise: AccountFactory.saveEnterprise(enterprise).then(function(){
+     console.log(&#39;save success&#39;);
+ }, function(){
+     console.log(&#39;save failed&#39;);
+ });
+ // 保存技术实力
+ saveTechnic: AccountFactory.saveTechnic(enterprise).then(function(data){
+     console.log(data);
+ }, function(){
+     console.log(&#39;save failed&#39;);
+ })
+ // 获取服务器状态  登录状态
+ getState : AccountFactory.getState().then(function(data){
+     console.log(data.isLogin);
+ });
+ // 保存修改密码
+ savePassword: AccountFactory.savePassword(oldValue, newValue).then(function(data){
+     console.log(data);
+ })
+ // 检查用户名是否已被注册
+ checkUsername: AccountFactory.checkUsername(username).then(function(data){
+         console.log(&#39;已被注册&#39;);
+ }, function(){
+         console.log(&#39;未被注册&#39;);
+ })
+ // 检查邮箱地址是否被注册
+ checkEmail : AccountFactory.checkEmail(email).then(function(){
+     console.log(&#39;已被注册&#39;);
+ }, function(){
+     console.log(&#39;未被注册&#39;);
+ })
+ // 检查手机号码是否被注册
+ checkCellphone: AccountFactory.checkCellphone(phone).then(function(){
+     console.log(&#39;已被注册&#39;);
+ }, function(){
+     console.log(&#39;未被注册&#39;);
+ })
+ // 提交注册表彰
+ register: AccountFactory.register(user).then(function(data){
+     console.log(data);
+ }, function(){
+     console.log(&#39;注册失败&#39;);
+ })</code></pre>
 
             </div>
         </div>
