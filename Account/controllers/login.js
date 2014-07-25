@@ -24,6 +24,7 @@ app.controller("LoginCtrl", ["$scope", "$rootScope", "$location", "$http", "API_
         }
         // 表单提交
         $scope.submit = function () {
+            debugger
             $http.post(API_END_POINT + 'login', $scope.user).success(function (data) {
                 $location.path('/');
                 $rootScope.showMsg('登录成功！');
