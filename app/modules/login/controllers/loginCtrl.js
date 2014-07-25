@@ -1,12 +1,11 @@
-app.controller('LoginCtrl', ['$scope', 'AccountFactory', function($scope, AccountFactory){
+app.controller('LoginCtrl', ['$scope', 'AccountFactory','HOST','$window', function($scope, AccountFactory, HOST, $window){
     $scope.user = {username: '',password: ''};
     $scope.submit = function(){
         AccountFactory.login($scope.user).then(function(data){
-            alert('login success' + data.username);
+            $window.location.href=HOST;
         }, function(){
-            alert('login failed');
+            alert('登录失败');
         });
-
     }
 }]);
 
