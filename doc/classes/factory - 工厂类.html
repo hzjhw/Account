@@ -219,6 +219,12 @@
          }, function(){
              console.log(&#39;登录失败&#39;);
          });
+ // 判断是否已登录
+ isLogin: AccountFactory.isLogin().then(function(data){
+         console.log(&quot;true&quot;);
+ }, function(){
+         console.log(&quot;false&quot;);
+ })
  // 退出登录
  logout : AccountFactory.logout().then(function(){
       console.log(&#39;logout success&#39;);
