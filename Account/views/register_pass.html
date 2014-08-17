@@ -1,8 +1,0 @@
-<div ng-repeat="alert in alerts" class="msgtip"   close="closeAlert($index)" ng-show="$last"><p class="inner {{alert.type}}">{{alert.msg}}</p></div>
-<div ng-controller="RegisterCtrl" class="shadow-dialog col-lg-10" >
-    <div class="scnt" style="padding-left:18px;">
-        <h3><i class="icon-envelope green"></i>请在72小时内点击邮件中的链接完成注册。</h3>
-        <h4>邮件已经发送到您的邮箱 <a  href="javascript:void(0);" ng-click="tomail(register_email)" ng-model="register_email">{{register_email}}</a></h4>
-        <div class="alertwords grey">没收到邮件？请检查你的垃圾箱或广告箱，邮件有可能被误认为垃圾或广告邮件；</div>
-    </div>
-</div>
